@@ -1,0 +1,193 @@
+// Milo
+
+.effect-milo:before {
+  -webkit-transition: background 0.35s, -webkit-transform 0.35s;
+  transition: background 0.35s, transform 0.35s;
+}
+
+.effect-milo {
+  h2 {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+  }
+}
+
+.effect-milo p {
+  // opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 70%, 0);
+  transform: translate3d(0, 70% ,0);
+}
+
+.effect-milo {
+  &:hover {
+    h2 {
+      -webkit-transform: translate3d(0, -100px, 0);
+      transform: translate3d(0, -100px ,0);
+    }
+    p {
+      opacity: 1;
+      -webkit-transform: translate3d(0, -80px, 0);
+      transform: translate3d(0, -80px, 0);
+    }
+  }
+}
+
+// Hover colours
+.news {
+  article:hover {
+    &:before {
+      background: rgba(categories(news), .5);
+    }
+  }
+}
+.health {
+  article:hover {
+    &:before {
+      background: rgba(categories(health), .5);
+    }
+  }
+}
+.tech {
+  article:hover {
+    &:before {
+      background: rgba(categories(tech), .3);
+    }
+  }
+}
+
+// Opacity
+.effect-opacity {
+  img {
+    @include single-transition(opacity);
+    -webkit-backface-visibility: hidden;
+  }
+  &:hover {
+    img {
+      @include opacity(.8);
+    }
+  }
+}
+
+
+// Menu overlay effect
+/* Overlay style */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  // background: rgba(153,204,51,0.9);
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    // background: url(../img/cross.png) no-repeat center center;
+    // text-indent: 200%;
+    outline: none;
+    z-index: 100;
+    font-size: rem-calc(36);
+    color: $tuatara;
+  }
+
+  &__inner { height: 100%; }
+
+  &__nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    // height: 60%;
+    font-size: rem-calc(54);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    &__list,
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: inline-block;
+      height: 100%;
+      width: 30%;
+      position: relative;
+    }
+    &__item,
+    li {
+      display: block;
+      height: 20%;
+      height: calc(100% / 5);
+      min-height: 54px;
+      a {
+        font-weight: 300;
+        display: block;
+        font-size: rem-calc(28);
+        color: #000;
+        padding: rem-calc(5 0);
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        &:hover,
+        &:focus {
+          color: #fff;
+          background-color: #000;
+        }
+      }
+    }
+  }
+
+  /* Effects */
+  &--cover {
+    background: rgba(255,255,255,.95);
+    // z-index: 101;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    nav {
+      -webkit-perspective: 1200px;
+      perspective: 1200px;
+    }
+    ul {
+      opacity: 0.4;
+      -webkit-transform: translateY(-25%) rotateX(35deg);
+      transform: translateY(-25%) rotateX(35deg);
+      -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+      transition: transform 0.5s, opacity 0.5s;
+    }
+  }
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    ul {
+      opacity: 1;
+      -webkit-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+  }
+
+  &--close {
+    ul {
+      -webkit-transform: translateY(25%) rotateX(-35deg);
+      transform: translateY(25%) rotateX(-35deg);
+    }
+  }
+}
+
+
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay ul li {
+    min-height: 34px;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Immersivly",
+  "version": "0.0.1",
+  "authors": [
+    "Daniel Zaremba <hello@dzaremba.com>"
+  ],
+  "description": "Immersivly Theme",
+  "dependencies": {
+    "foundation": "=5.4.3",
+    "sticky": "*",
+    "packery": "~1.2.4",
+    "imagesloaded": "~3.1.8",
+    "isotope": "~2.0.1",
+    "mixitup2": "~2.1.7",
+    "slick.js": "~1.3.13",
+    "skrollr": "~0.6.29",
+    "jquery-sticky": "~1.0.1",
+    "jquery-waypoints": "~2.0.5"
+  }
+}

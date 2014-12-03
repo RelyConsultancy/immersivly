@@ -1,0 +1,207 @@
+<html ng-app="app">
+<head>
+	
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!-- <title data-ng-bind="title"></title> -->
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+	
+	<!-- <link rel="stylesheet" href="../bower_components/fullpage.js/jquery.fullPage.css"> -->
+	<link rel="stylesheet" href="bower_components/pagepiling.js/jquery.pagepiling.css">
+    <link rel="stylesheet" href="dist/css/app.css">
+
+	<title>Immersivly App</title>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+</head>
+<body>
+	<aside class="sidebar">
+		<a class="logo" href="#">Logo</a>
+	</aside>
+
+	<div class="content">
+		<div id="fullpage">
+			<div class="section">
+				<div class="row">
+					<div class="small-12 medium-4 columns">
+						<article class="effect-milo" data-layout="1">
+							<div class="actions">
+								<span class="label">News</span>
+							</div>
+							<!-- <figure class="effect-milo"> -->
+								<img src="dist/img/img-2-2.jpg" alt="">
+				
+								<div class="title">
+									<h2>Why Hong Kong protests had to happen</h2>
+									<p>Milo went to the woods. He took a fun ride and never came back.</p>
+								</div>
+								<a href="#"></a>
+							<!-- </figure> -->
+						</article>
+						<article data-layout="1/2">
+							<img src="dist/img/img-2-1.jpg" alt="">
+						</article>
+						<article data-layout="1/2">
+							<img src="dist/img/img-2-1.jpg" alt="">
+						</article>
+					</div>
+					<div class="small-12 medium-4 columns">
+						<article data-layout="1/3">
+							<img src="dist/img/img-2-3.jpg" alt="">
+						</article>
+						<article data-layout="1/3">
+							<img src="dist/img/img-2-3.jpg" alt="">
+						</article>
+						<article data-layout="1/3">
+							<img src="dist/img/img-2-3.jpg" alt="">
+						</article>
+					</div>
+					<div class="small-12 medium-4 columns">
+						<article data-layout="1">
+							<img src="dist/img/img-2-2.jpg" alt="">
+						</article>
+						<article data-layout="1">
+							<img src="dist/img/img-2-2.jpg" alt="">
+						</article>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="row">
+					<div class="small-12 medium-4 columns">
+						<article data-layout="1">
+							<img src="dist/img/img-2-2.jpg" alt="">
+						</article>
+						<article data-layout="1/2">
+							<img src="dist/img/img-2-1.jpg" alt="">
+						</article>
+						<article data-layout="1/2">
+							<img src="dist/img/img-2-1.jpg" alt="">
+						</article>
+					</div>
+					<div class="small-12 medium-4 columns">
+						<article data-layout="1/3">
+							<img src="dist/img/img-2-3.jpg" alt="">
+						</article>
+						<article data-layout="1/3">
+							<img src="dist/img/img-2-3.jpg" alt="">
+						</article>
+						<article data-layout="1/3">
+							<img src="dist/img/img-2-3.jpg" alt="">
+						</article>
+					</div>
+					<div class="small-12 medium-4 columns">
+						<article data-layout="1">
+							<img src="dist/img/img-2-2.jpg" alt="">
+						</article>
+						<article data-layout="1">
+							<img src="dist/img/img-2-2.jpg" alt="">
+						</article>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="row">
+					<div class="small-12 medium-4 columns">
+						<article data-layout="1/2">
+							<img src="dist/img/img-2-1.jpg" alt="">
+						</article>
+						<article data-layout="1">
+							<img src="dist/img/img-2-2.jpg" alt="">
+						</article>
+						<article data-layout="1/2">
+							<img src="dist/img/img-2-1.jpg" alt="">
+						</article>
+					</div>
+					<div class="small-12 medium-4 columns">
+						<article data-layout="1/3">
+							<img src="dist/img/img-2-3.jpg" alt="">
+						</article>
+						<article data-layout="1/3">
+							<img src="dist/img/img-2-3.jpg" alt="">
+						</article>
+						<article data-layout="1/3">
+							<img src="dist/img/img-2-3.jpg" alt="">
+						</article>
+					</div>
+					<div class="small-12 medium-4 columns">
+						<article data-layout="1">
+							<img src="dist/img/img-2-2.jpg" alt="">
+						</article>
+						<article data-layout="1">
+							<img src="dist/img/img-2-2.jpg" alt="">
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+	/*
+ * Plugin Name: Resize Image to Parent Container
+ *
+ * Author: Christian Varga
+ * Author URI: http://christianvarga.com
+ *
+ */
+// (function(a){a.fn.resizeToParent=function(c){var e={parent:"div",delay:100};var c=a.extend(e,c);function f(n){n.css({width:"",height:"","margin-left":"","margin-top":""});var k=n.parents(c.parent).width();var j=n.parents(c.parent).height();var h=n.width();var g=n.height();var m=h/k;if((g/m)<j){n.css({width:"auto",height:j});h=h/(g/j);g=j}else{n.css({height:"auto",width:k});h=k;g=g/m}var l=(h-k)/-2;var i=(g-j)/-2;n.css({"margin-left":l,"margin-top":i})}var d;var b=this;a(window).on("resize",function(){clearTimeout(d);d=setTimeout(function(){b.each(function(){f(a(this))})},c.delay)});return this.each(function(){var g=a(this);g.attr("src",g.attr("src"));g.load(function(){f(g)});if(this.complete){f(g)}})}})(jQuery);
+
+
+
+/*!
+ * imagesLoaded PACKAGED v3.1.4
+ * JavaScript is all like "You images are done yet or what?"
+ * MIT License
+ */
+
+(function(){function e(){}function t(e,t){for(var n=e.length;n--;)if(e[n].listener===t)return n;return-1}function n(e){return function(){return this[e].apply(this,arguments)}}var i=e.prototype,r=this,o=r.EventEmitter;i.getListeners=function(e){var t,n,i=this._getEvents();if("object"==typeof e){t={};for(n in i)i.hasOwnProperty(n)&&e.test(n)&&(t[n]=i[n])}else t=i[e]||(i[e]=[]);return t},i.flattenListeners=function(e){var t,n=[];for(t=0;e.length>t;t+=1)n.push(e[t].listener);return n},i.getListenersAsObject=function(e){var t,n=this.getListeners(e);return n instanceof Array&&(t={},t[e]=n),t||n},i.addListener=function(e,n){var i,r=this.getListenersAsObject(e),o="object"==typeof n;for(i in r)r.hasOwnProperty(i)&&-1===t(r[i],n)&&r[i].push(o?n:{listener:n,once:!1});return this},i.on=n("addListener"),i.addOnceListener=function(e,t){return this.addListener(e,{listener:t,once:!0})},i.once=n("addOnceListener"),i.defineEvent=function(e){return this.getListeners(e),this},i.defineEvents=function(e){for(var t=0;e.length>t;t+=1)this.defineEvent(e[t]);return this},i.removeListener=function(e,n){var i,r,o=this.getListenersAsObject(e);for(r in o)o.hasOwnProperty(r)&&(i=t(o[r],n),-1!==i&&o[r].splice(i,1));return this},i.off=n("removeListener"),i.addListeners=function(e,t){return this.manipulateListeners(!1,e,t)},i.removeListeners=function(e,t){return this.manipulateListeners(!0,e,t)},i.manipulateListeners=function(e,t,n){var i,r,o=e?this.removeListener:this.addListener,s=e?this.removeListeners:this.addListeners;if("object"!=typeof t||t instanceof RegExp)for(i=n.length;i--;)o.call(this,t,n[i]);else for(i in t)t.hasOwnProperty(i)&&(r=t[i])&&("function"==typeof r?o.call(this,i,r):s.call(this,i,r));return this},i.removeEvent=function(e){var t,n=typeof e,i=this._getEvents();if("string"===n)delete i[e];else if("object"===n)for(t in i)i.hasOwnProperty(t)&&e.test(t)&&delete i[t];else delete this._events;return this},i.removeAllListeners=n("removeEvent"),i.emitEvent=function(e,t){var n,i,r,o,s=this.getListenersAsObject(e);for(r in s)if(s.hasOwnProperty(r))for(i=s[r].length;i--;)n=s[r][i],n.once===!0&&this.removeListener(e,n.listener),o=n.listener.apply(this,t||[]),o===this._getOnceReturnValue()&&this.removeListener(e,n.listener);return this},i.trigger=n("emitEvent"),i.emit=function(e){var t=Array.prototype.slice.call(arguments,1);return this.emitEvent(e,t)},i.setOnceReturnValue=function(e){return this._onceReturnValue=e,this},i._getOnceReturnValue=function(){return this.hasOwnProperty("_onceReturnValue")?this._onceReturnValue:!0},i._getEvents=function(){return this._events||(this._events={})},e.noConflict=function(){return r.EventEmitter=o,e},"function"==typeof define&&define.amd?define("eventEmitter/EventEmitter",[],function(){return e}):"object"==typeof module&&module.exports?module.exports=e:this.EventEmitter=e}).call(this),function(e){function t(t){var n=e.event;return n.target=n.target||n.srcElement||t,n}var n=document.documentElement,i=function(){};n.addEventListener?i=function(e,t,n){e.addEventListener(t,n,!1)}:n.attachEvent&&(i=function(e,n,i){e[n+i]=i.handleEvent?function(){var n=t(e);i.handleEvent.call(i,n)}:function(){var n=t(e);i.call(e,n)},e.attachEvent("on"+n,e[n+i])});var r=function(){};n.removeEventListener?r=function(e,t,n){e.removeEventListener(t,n,!1)}:n.detachEvent&&(r=function(e,t,n){e.detachEvent("on"+t,e[t+n]);try{delete e[t+n]}catch(i){e[t+n]=void 0}});var o={bind:i,unbind:r};"function"==typeof define&&define.amd?define("eventie/eventie",o):e.eventie=o}(this),function(e,t){"function"==typeof define&&define.amd?define(["eventEmitter/EventEmitter","eventie/eventie"],function(n,i){return t(e,n,i)}):"object"==typeof exports?module.exports=t(e,require("eventEmitter"),require("eventie")):e.imagesLoaded=t(e,e.EventEmitter,e.eventie)}(this,function(e,t,n){function i(e,t){for(var n in t)e[n]=t[n];return e}function r(e){return"[object Array]"===d.call(e)}function o(e){var t=[];if(r(e))t=e;else if("number"==typeof e.length)for(var n=0,i=e.length;i>n;n++)t.push(e[n]);else t.push(e);return t}function s(e,t,n){if(!(this instanceof s))return new s(e,t);"string"==typeof e&&(e=document.querySelectorAll(e)),this.elements=o(e),this.options=i({},this.options),"function"==typeof t?n=t:i(this.options,t),n&&this.on("always",n),this.getImages(),a&&(this.jqDeferred=new a.Deferred);var r=this;setTimeout(function(){r.check()})}function c(e){this.img=e}function f(e){this.src=e,v[e]=this}var a=e.jQuery,u=e.console,h=u!==void 0,d=Object.prototype.toString;s.prototype=new t,s.prototype.options={},s.prototype.getImages=function(){this.images=[];for(var e=0,t=this.elements.length;t>e;e++){var n=this.elements[e];"IMG"===n.nodeName&&this.addImage(n);for(var i=n.querySelectorAll("img"),r=0,o=i.length;o>r;r++){var s=i[r];this.addImage(s)}}},s.prototype.addImage=function(e){var t=new c(e);this.images.push(t)},s.prototype.check=function(){function e(e,r){return t.options.debug&&h&&u.log("confirm",e,r),t.progress(e),n++,n===i&&t.complete(),!0}var t=this,n=0,i=this.images.length;if(this.hasAnyBroken=!1,!i)return this.complete(),void 0;for(var r=0;i>r;r++){var o=this.images[r];o.on("confirm",e),o.check()}},s.prototype.progress=function(e){this.hasAnyBroken=this.hasAnyBroken||!e.isLoaded;var t=this;setTimeout(function(){t.emit("progress",t,e),t.jqDeferred&&t.jqDeferred.notify&&t.jqDeferred.notify(t,e)})},s.prototype.complete=function(){var e=this.hasAnyBroken?"fail":"done";this.isComplete=!0;var t=this;setTimeout(function(){if(t.emit(e,t),t.emit("always",t),t.jqDeferred){var n=t.hasAnyBroken?"reject":"resolve";t.jqDeferred[n](t)}})},a&&(a.fn.imagesLoaded=function(e,t){var n=new s(this,e,t);return n.jqDeferred.promise(a(this))}),c.prototype=new t,c.prototype.check=function(){var e=v[this.img.src]||new f(this.img.src);if(e.isConfirmed)return this.confirm(e.isLoaded,"cached was confirmed"),void 0;if(this.img.complete&&void 0!==this.img.naturalWidth)return this.confirm(0!==this.img.naturalWidth,"naturalWidth"),void 0;var t=this;e.on("confirm",function(e,n){return t.confirm(e.isLoaded,n),!0}),e.check()},c.prototype.confirm=function(e,t){this.isLoaded=e,this.emit("confirm",this,t)};var v={};return f.prototype=new t,f.prototype.check=function(){if(!this.isChecked){var e=new Image;n.bind(e,"load",this),n.bind(e,"error",this),e.src=this.src,this.isChecked=!0}},f.prototype.handleEvent=function(e){var t="on"+e.type;this[t]&&this[t](e)},f.prototype.onload=function(e){this.confirm(!0,"onload"),this.unbindProxyEvents(e)},f.prototype.onerror=function(e){this.confirm(!1,"onerror"),this.unbindProxyEvents(e)},f.prototype.confirm=function(e,t){this.isConfirmed=!0,this.isLoaded=e,this.emit("confirm",this,t)},f.prototype.unbindProxyEvents=function(e){n.unbind(e.target,"load",this),n.unbind(e.target,"error",this)},s});
+
+(function(e){e.fn.imagecover=function(t){var n=this,r={throttle:200,runOnce:false,css2:false,preloadAllImages:false,addPreload:false,loadingClass:"ic-loading"},i=e.extend({},r,t);var s=function(){n.each(function(){var t=e(this),n=t.find(">img").first().css({position:"absolute"}),r=t.css("position");t.css({overflow:"hidden",position:r==="static"?"relative":r});o.call(this);var s=i.preloadAllImages?e(this):n;s.imagesLoaded().done(function(e){var r;t.data("ic-height",t.height());t.data("ic-width",t.width());var i=n.width(),s=n.height();r=!i&&!s?false:n.width()/n.height();t.data("ic-imgRatio",r);if(!r){f.call(this)}else{o.call(this);u.call(this)}})});if(!i.runOnce)window.setInterval(function(){l()},i.throttle)};var o=function(){var t=e(this).hasClass(i.loadingClass);if(t){e(this).removeClass(i.loadingClass)}else{e(this).addClass(i.loadingClass)}if(i.addPreload){var n=!i.addPreload?i.addPreload:"ic-preloader";if(t){var r='<div class="'+n+'" style="position:absolute; left:0; right:0; bottom:0; top:0; z-index:999999;"></div>';e(this).prepend(r)}else{e(this).find("."+n).fadeOut(function(){e(this).remove()})}}};var u=function(t){var r=t?t:n;r.each(function(){var t=e(this),n=t.find(">img").first();width=t.width(),height=t.height(),iRatio=t.data("ic-imgRatio"),cRatio=width/height;if(typeof iRatio==="undefined"||!iRatio)return false;if(cRatio<iRatio){n.css({width:"auto",height:height,top:0,left:-(height*iRatio-width)/2})}else{n.css({width:width,height:"auto",top:-(width/iRatio-height)/2,left:0})}})};var a=function(){n.each(function(){var t=e(this),n=t.find(">img").first();var r=i.preloadAllImages?t:n;o.call(this);r.imagesLoaded().done(function(e){o.call(this)});t.css({"background-repeat":"no-repeat","background-position":"center","background-size":"cover","background-image":"url("+n.attr("src")+")"});n.remove()})};var f=function(){var t=e(this);window.setTimeout(function(){var e=t.find(">img").first();imgRatio=!width&&!height?false:e.width()/e.height();t.data("ic-imgRatio",imgRatio);if(!imgRatio){f.call(this)}else{o.call(this);u.call(this)}},i.throttle)};var l=function(){n.each(function(){var t=e(this),n=t.height(),r=t.width();if(t.data("ic-height")!==n||t.data("ic-height")!==r){t.data("ic-height",n);t.data("ic-height",r);u(t)}})};if(!Modernizr.backgroundsize||i.css2)s();else a();return this}})(jQuery)
+</script>
+<!-- <script src="http://vnjs.net/www/project/freewall/freewall.js"></script> -->
+<!-- <script src="../bower_components/fullpage.js/vendors/jquery.easings.min.js"></script> -->
+<!-- <script src="../bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script> -->
+<!-- <script src="../bower_components/fullpage.js/jquery.fullPage.min.js"></script> -->
+<script src="bower_components/pagepiling.js/jquery.pagepiling.min.js"></script>
+
+
+<script>
+	var resizeImg = function() {
+		// return $('img').resizeToParent({parent: 'article'});
+	}
+
+	$(document).ready(function() {
+
+		// resizeImg();
+
+		$('[data-layout]').imagecover();
+
+		// $('article').each(function() {
+		// 	$(this).imagecover();
+		// });
+
+		$('#fullpage').pagepiling();
+
+	  //   $('#fullpage').fullpage({
+	  //   	css3: true,
+	  //   	navigation: true,
+			// navigationPosition: 'right',
+			// navigationTooltips: ['First', 'Second', 'Third'],
+
+			// // afterResize: function() {
+	  // //           resizeImg();
+	  // //       }
+	  //   });
+	});
+</script>
+</html>
