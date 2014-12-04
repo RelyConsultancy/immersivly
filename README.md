@@ -14,3 +14,9 @@
 5. Import the latest SQL dump from under sql/ (immersivly.sql)
 
 6. In your browser, open http://immersivly.local/. Tadaam!
+
+
+
+## WP Admin 
+* user: *admin*
+* pass: *par0la*

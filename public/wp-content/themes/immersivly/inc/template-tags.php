@@ -166,19 +166,19 @@ function immersivly_author_box() {
 			$gplus = 	get_the_author_meta( 'google_profile' );
 			$linkedin = get_the_author_meta( 'linkedin_profile' );
 
-			$profiles = [];
+			$profiles = array();
 
 			if ( $twitter ) {
-				$profiles[] = [ 'type' => 'twitter', 'url' => get_the_author_meta( 'twitter_profile' ) ];
+				$profiles[] = array ( 'type' => 'twitter', 'url' => get_the_author_meta( 'twitter_profile' ) );
 			}
 			if ( $facebook ) {
-				$profiles[] = [ 'type' => 'facebook', 'url' => get_the_author_meta( 'facebook_profile' ) ];
+				$profiles[] = array ( 'type' => 'facebook', 'url' => get_the_author_meta( 'facebook_profile' ) );
 			}
 			if ( $gplus ) {
-				$profiles[] = [ 'type' => 'gplus', 'url' => get_the_author_meta( 'google_profile' ) ];
+				$profiles[] = array ( 'type' => 'gplus', 'url' => get_the_author_meta( 'google_profile' ) );
 			}
 			if ( $linkedin ) {
-				$profiles[] = [ 'type' => 'linkedin', 'url' => get_the_author_meta( 'linkedin_profile' ) ];
+				$profiles[] = array ( 'type' => 'linkedin', 'url' => get_the_author_meta( 'linkedin_profile' ) );
 			}
 		?>
 
