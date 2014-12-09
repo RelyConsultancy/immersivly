@@ -68,6 +68,12 @@
 .icon-menu:before {
 	content: "\e60e";
 }
+.icon-arrow-left:before {
+	content: "\e60f";
+}
+.icon-arrow-right:before {
+	content: "\e610";
+}
 
 // Used to attach font icons on forms
 [data-icon] {
