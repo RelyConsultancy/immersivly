@@ -6,7 +6,8 @@
  */
 ?>
 
-<aside class="sidebar">
+<aside class="sidebar sidebar--closed">
+	<i class="sidebar__switch icon-menu"></i>
 	<a class="sidebar__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 
 	<h1 class="sidebar__name"><?php bloginfo( 'name' ); ?></h1>
@@ -26,7 +27,7 @@
 			$current_category = get_category( get_query_var( 'cat' ) );
 
 			if ( $is_home ) {
-				foreach ( $categories as $category ) { 
+				foreach ( $categories as $category ) {
 				    echo '<li class="categories__item  categories__item--' . $category->category_nicename . '"><input id="filter_' . $category->category_nicename . '" name="filter" type="checkbox" checked value=".' . $category->category_nicename . '"><label for="filter_' . $category->category_nicename . '" class="categories__label"><span>' . $category->name . '</span></label></li>';
 				}
 			} else {
