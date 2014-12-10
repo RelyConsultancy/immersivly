@@ -239,6 +239,9 @@
     // Init main
     IMM.init();
 
+
+    // sidebar switch
+
     $('.sidebar__switch').on('click', function() {
       $('.sidebar').toggleClass('sidebar--closed');
     });

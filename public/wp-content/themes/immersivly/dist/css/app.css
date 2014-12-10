@@ -5186,6 +5186,49 @@ section.stuck {
   position: relative;
 }
 
+.pf-select {
+  width: 100%;
+  background: no-repeat 95% center/10px #959595 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAQAAACYyMTDAAAAVElEQVQoFY3BQRGAIBRF0TckIAdtfiYCsSEMw4ISBLgOKxVFOUc0djSR2JGEI/In4jRgdFY6phOByptK0B2ezCzj9YQjchVxWsHoDB3TNwKFQtDkAM9p4v/tH1vLAAAAAElFTkSuQmCC");
+  color: #fff;
+  border: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9375rem;
+  padding: 0 0.5rem;
+  font-weight: 300;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+.pf-select:hover {
+  background-color: #777;
+  transition: background-color .3s;
+}
+.pf-select, .pf-select:focus {
+  outline: 0;
+}
+
+.pf-select::-ms-expand {
+  display: none;
+}
+
+.pf-select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #fff;
+}
+
+.pf-button {
+  height: 1.875rem;
+  line-height: 1.875rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #fff;
+  padding: 0 0.875rem;
+  width: 100%;
+}
+
 .row, .isotope {
   height: 100% !important;
 }
@@ -5242,6 +5285,14 @@ article {
   }
   .sidebar--closed + .content {
     margin-left: 50px;
+  }
+
+  .pf-select {
+    max-width: 150px;
+  }
+
+  .pf-button {
+    width: auto;
   }
 }
 
