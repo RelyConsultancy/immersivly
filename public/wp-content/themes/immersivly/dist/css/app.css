@@ -4387,11 +4387,9 @@ figure {
   top: 0;
   color: #fff;
   z-index: 1001;
-  transition: .3s;
 }
 .sidebar + .content {
   margin-left: 50px;
-  transition: margin-left .3s;
 }
 .sidebar__switch {
   display: block;

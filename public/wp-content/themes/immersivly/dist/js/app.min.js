@@ -250,10 +250,10 @@
     $(window).on('resize', sidebarHandler);
 
     function sidebarHandler() {
-      if ( $(window).width() > 1024 ) {
-        $('.sidebar').removeClass('sidebar--closed');
-      } else if ( !$('.sidebar').hasClass('sidebar--closed') ) {
+      if ( $(window).width() < 1024 ) {
         $('.sidebar').addClass('sidebar--closed');
+      } else if ( $('.sidebar').hasClass('sidebar--closed') ) {
+        $('.sidebar').removeClass('sidebar--closed');
       }
     }
 

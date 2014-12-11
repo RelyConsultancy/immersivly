@@ -6,7 +6,7 @@
  */
 ?>
 
-<aside class="sidebar sidebar--closed">
+<aside class="sidebar">
 	<i class="sidebar__switch icon-menu"></i>
 	<a class="sidebar__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 
