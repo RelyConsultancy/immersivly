@@ -126,7 +126,7 @@ function immersivly_scripts() {
 
     wp_enqueue_style( 'immersivly-style', get_template_directory_uri() . '/dist/css/app.css' );
 
-    
+
 
 
 
@@ -362,4 +362,12 @@ function immersivly_social_media_buttons() {
     $share_hook = ob_get_contents(); // get the contents of the output buffer
     ob_end_clean(); //  clean (erase) the output buffer and turn off output buffering
     echo $share_hook;
+}
+
+
+//
+
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
 }

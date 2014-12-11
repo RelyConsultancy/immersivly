@@ -685,6 +685,34 @@ section.stuck {
 //   height: 750px;
 // }
 
+// - Corporate page (page.php)
+
+.entry {
+  &__header {
+    margin-top: rem-calc(50);
+  }
+  &__content {
+    blockquote,
+    blockquote p:first-child {
+      border-color: #000;
+      color: #000;
+    }
+    p {
+      font-family: $font-family-serif;
+    }
+  }
+  &__excerpt {
+    p {
+      font-size: rem-calc(24);
+      font-weight: 300;
+      font-family: $font-family-sans-serif;
+      line-height: rem-calc(29);
+      margin: rem-calc(30 0 50);
+    }
+  }
+}
+
+
 // - Posts
 
 // -- Post content

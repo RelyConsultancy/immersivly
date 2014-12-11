@@ -7,7 +7,7 @@
 ?>
 
 <article class="entry" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 
 	<div class="row">
 		<div class="small-12 medium-10 medium-centered columns">
@@ -16,6 +16,7 @@
 			</header>
 
 			<div class="entry__content">
+				<div class="entry__excerpt"><?php the_excerpt(); ?></div>
 				<?php the_content(); ?>
 				<?php
 					wp_link_pages( array(

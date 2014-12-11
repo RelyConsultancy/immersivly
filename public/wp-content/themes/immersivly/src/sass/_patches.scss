@@ -3,35 +3,37 @@
 
 // - Row collapse independent of the depth level. Only for homepage grid
 .home {
-  .row.collapse .column, 
+  .row.collapse .column,
   .row.collapse .columns{
     padding: 0;
   }
 }
 
 // - Blockquote
-.entry-content
-blockquote {
-  border-color: $brand;
-  color: $brand;
-  quotes: "\201C""\201D""\2018""\2019";
-  &:before {
-    content: open-quote;
-    display: block;
-    font-size: rem-calc(60);
-    font-family: $font-family-monospace;
-    height: rem-calc(30);
-    line-height: 1em;
-  }
-  p {
-    font-family: $font-family-sans-serif;
-    font-weight: 300;
-    font-size: rem-calc(14);
-    margin-bottom: rem-calc(10);
-    &:first-child {
-      color: $brand;
-      font-size: rem-calc(24);
-      line-height: 1.1em;
+.entry-content,
+.entry__content {
+  blockquote {
+    border-color: $brand;
+    color: $brand;
+    quotes: "\201C""\201D""\2018""\2019";
+    &:before {
+      content: open-quote;
+      display: block;
+      font-size: rem-calc(60);
+      font-family: $font-family-monospace;
+      height: rem-calc(30);
+      line-height: 1em;
+    }
+    p {
+      font-family: $font-family-sans-serif;
+      font-weight: 300;
+      font-size: rem-calc(14);
+      margin-bottom: rem-calc(10);
+      &:first-child {
+        color: $brand;
+        font-size: rem-calc(24);
+        line-height: 1.1em;
+      }
     }
   }
 }

@@ -4082,14 +4082,14 @@ th.hide-for-touch {
   padding: 0;
 }
 
-.entry-content
-blockquote {
+.entry-content blockquote,
+.entry__content blockquote {
   border-color: #ac4b97;
   color: #ac4b97;
   quotes: "“" "”" "‘" "’";
 }
-.entry-content
-blockquote:before {
+.entry-content blockquote:before,
+.entry__content blockquote:before {
   content: open-quote;
   display: block;
   font-size: 3.75rem;
@@ -4097,15 +4097,15 @@ blockquote:before {
   height: 1.875rem;
   line-height: 1em;
 }
-.entry-content
-blockquote p {
+.entry-content blockquote p,
+.entry__content blockquote p {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   margin-bottom: 0.625rem;
 }
-.entry-content
-blockquote p:first-child {
+.entry-content blockquote p:first-child,
+.entry__content blockquote p:first-child {
   color: #ac4b97;
   font-size: 1.5rem;
   line-height: 1.1em;
@@ -4852,6 +4852,25 @@ section.stuck {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.entry__header {
+  margin-top: 3.125rem;
+}
+.entry__content blockquote,
+.entry__content blockquote p:first-child {
+  border-color: #000;
+  color: #000;
+}
+.entry__content p {
+  font-family: "PT Serif", serif;
+}
+.entry__excerpt p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  line-height: 1.8125rem;
+  margin: 1.875rem 0 3.125rem;
 }
 
 .entry-content p {
