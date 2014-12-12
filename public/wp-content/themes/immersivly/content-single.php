@@ -76,7 +76,7 @@
 			</div>
 		</div>
 
-		<?php if ( get_field('article_slider') ) : ?>
+		<?php if ( get_field('article_slider') && !get_field('article_secondary_image') ) : ?>
             <section class="media media_picture" style="height: auto;">
             <ul class="bxslider">
                 <?php 
@@ -91,37 +91,11 @@
             </section>
         <?php endif; ?>
 
-        <!-- <li><img src='$row['slide_image']['url']' alt='$row['slide_text']'></li> -->
 
-		<?php if ( get_field('article_secondary_image') && !get_field('article_slider') ) : ?>
+		<?php if ( get_field('article_secondary_image') ) : ?>
 			<?php $file = get_field('article_secondary_image'); ?>
 
-			<!-- <img src="<?php echo $file['url']; ?>" alt="<?php echo $file['url']; ?>"> -->
-
 			<?php if ( $file['mime_type'] === 'video/mp4' ) : ?>
-				<!-- poster="http://graphics8.nytimes.com/packages/images/multimedia/bundles/projects/2012/AvalancheDeploy/flyover.jpg" -->
-				<!-- <video src="<?php echo $file['url']; ?>"></video> -->
-				<!-- style="position: absolute; z-index: 1; top: 0px; left: 0px; min-width: 0px; min-height: 0px; width: 1239px; height: 697px;" -->
-			<!-- 	<div
-					class="parallax-image-wrapper parallax-image-wrapper-750"
-					data-anchor-target=".media"
-					data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-					data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-
-					<div
-						class="parallax-image parallax-image-50"
-						data-anchor-target=".media"
-						data-bottom-top="transform: translate3d(0px, 0%, 0px);"
-						data-top-bottom="transform: translate3d(0px, 90%, 0px);">
-						<div class="vid-bg">
-							<video controls loop id="bgvid" preload="auto" width="100%">
-								<source src="<?php echo $file['url']; ?>" type="video/mp4">
-							</video>
-						</div>
-					</div>
-				</div> -->
-
-				
 
 				<section class="media media__video">
 					<div class="videobg">
@@ -132,20 +106,6 @@
 					</div>
 				</section>
 			<?php else : ?>
-	<!-- 			<div
-					class="parallax-image-wrapper parallax-image-wrapper-750"
-					data-anchor-target=".media"
-					data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-					data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-
-					<div
-						class="parallax-image parallax-image-50"
-						style="background-image:url(<?php echo $file['url']; ?>)"
-						data-anchor-target=".media"
-						data-bottom-top="transform: translate3d(0px, 0%, 0px);"
-						data-top-bottom="transform: translate3d(0px, 90%, 0px);"
-					></div>
-				</div> -->
 				<section class="media media_picture" style="background-image: url();">
 					<img src="<?php echo $file['url']; ?>" alt="">
 				</section>
