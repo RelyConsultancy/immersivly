@@ -23,6 +23,11 @@
         mobileDeceleration: 0.004
       });
 
+
+      if ( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        var isMobile = true;
+      }
+
       var $section_container = $('.isotope'),
           $isotope_container = $('.isotope'),
           $filters = $('#filters input'),
@@ -78,13 +83,17 @@
 
       // $('.isotope').pagepiling();
       if ( $isotope_container.length ) {
-        $isotope_container.fullpage({
-          css3: true,
-          navigation: true,
-          // responsive: 1,
-          navigationPosition: 'right',
-          // navigationTooltips: ['First', 'Second', 'Third'],
-        });
+        if ( !isMobile ) {
+          $isotope_container.fullpage({
+            css3: true,
+            navigation: true,
+            // responsive: 1,
+            navigationPosition: 'right',
+            // navigationTooltips: ['First', 'Second', 'Third'],
+          });
+        } else {
+          $('html, body').css('overflow', 'auto');
+        }
 
         $('.js-go-top').on('click', function(event) {
           event.preventDefault();
