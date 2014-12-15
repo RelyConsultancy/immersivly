@@ -106,8 +106,15 @@
 					</div>
 				</section>
 			<?php else : ?>
-				<section class="media media_picture" style="background-image: url();">
-					<img src="<?php echo $file['url']; ?>" alt="">
+				<section class="media media_picture">
+					<pre><?php //print_r($file) ?></pre>
+					<!-- <img src="<?php echo $file['url']; ?>" alt=""> -->
+
+					<picture>
+						<source srcset="<?php echo $file['url']; ?>" media="(min-width: 1000px)">
+						<source srcset="<?php echo $file['sizes']['large']; ?>" media="(min-width: 800px)">
+						<img srcset="<?php echo $file['sizes']['article-phone']; ?>, <?php echo $file['sizes']['article-phone-retina']; ?> 2x" alt="<?php echo $file['title']; ?>">
+					</picture>
 				</section>
 			<?php endif; ?>
 		<?php endif; ?>

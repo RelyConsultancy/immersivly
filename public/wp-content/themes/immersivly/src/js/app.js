@@ -18,11 +18,6 @@
           $.extend( IMM.config, config );
       }
 
-      skrollr.init({
-        smoothScrolling: false,
-        mobileDeceleration: 0.004
-      });
-
 
       if ( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         var isMobile = true;
@@ -150,32 +145,32 @@
         slide: 'li',
         speed: 300,
         slidesToShow: 2,
-        // slidesToScroll: 2,
-        // responsive: [
-        //   {
-        //     breakpoint: 1024,
-        //     settings: {
-        //       slidesToShow: 3,
-        //       slidesToScroll: 3,
-        //       infinite: true,
-        //       dots: true
-        //     }
-        //   },
-        //   {
-        //     breakpoint: 600,
-        //     settings: {
-        //       slidesToShow: 2,
-        //       slidesToScroll: 2
-        //     }
-        //   },
-        //   {
-        //     breakpoint: 480,
-        //     settings: {
-        //       slidesToShow: 1,
-        //       slidesToScroll: 1
-        //     }
-        //   }
-        // ]
+        slidesToScroll: 2,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       });
 
       // Shares count
@@ -183,7 +178,9 @@
 
 
       // Sticky
-      $('.videobg, .media_picture').waypoint('sticky');
+      if ( !isMobile ) {
+        $('.videobg, .media_picture').waypoint('sticky');
+      };
 
       $('.entry__video').waypoint(function( direction ) {
         if ( direction === 'down' ) {

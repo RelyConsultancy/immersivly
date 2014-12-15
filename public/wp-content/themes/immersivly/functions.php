@@ -28,6 +28,10 @@ function immersivly_setup() {
     add_image_size( 'popular', 360, 280, true ); // (cropped)
     add_image_size( 'block', 460, 340, true ); // (cropped)
 
+
+    add_image_size( 'article-phone', 460 );
+    add_image_size( 'article-phone-retina', 920 );
+
     /*
      * Make theme available for translation.
      * Translations can be filed in the /languages/ directory.
@@ -132,7 +136,7 @@ function immersivly_scripts() {
 
     wp_enqueue_script( 'plugin-sharrre', get_template_directory_uri() . '/share/jquery.sharrre.min.js', array(), '1.3.5', true );
 
-    wp_enqueue_script( 'plugin-skrollr', get_template_directory_uri() . '/bower_components/skrollr/dist/skrollr.min.js', array(), '0.6.29', true );
+    // wp_enqueue_script( 'plugin-skrollr', get_template_directory_uri() . '/bower_components/skrollr/dist/skrollr.min.js', array(), '0.6.29', true );
 
     // Jquery sticky
     wp_enqueue_script( 'plugin-sticky', get_template_directory_uri() . '/bower_components/jquery-sticky/jquery.sticky.js', array(), '1.0.1', true );
@@ -143,6 +147,8 @@ function immersivly_scripts() {
     wp_enqueue_script( 'plugin-slick-carousel', get_template_directory_uri() . '/bower_components/slick.js/slick/slick.min.js', array(), '1.3.13', true );
 
     wp_enqueue_script( 'immersivly-plugins', get_template_directory_uri() . '/src/js/plugins.js', array(), '0.1', true );
+
+    wp_enqueue_script( 'plugin-picturefill', get_template_directory_uri() . '/src/js/picturefill.js', array(), '2.2.0', true );
 
 
     wp_enqueue_script( 'immersivly-js', get_template_directory_uri() . '/dist/js/app.min.js', array('jquery'), '0.1', true );
@@ -233,7 +239,7 @@ function get_excerpt_by_id($post_id){
  * @return  string
  */
 function my_custom_popular_posts_html_list( $mostpopular, $instance ) {
-    $output = '<ul class="small-block-grid-6 medium-block-grid-4">';
+    $output = '<ul class="small-block-grid-2 medium-block-grid-4">';
 
     // loop the array of popular posts objects
     foreach( $mostpopular as $popular ) {
