@@ -36,12 +36,14 @@ class Profile_Builder_Form_Creator{
 		$this->args['redirect_activated'] = apply_filters( 'wppb_redirect_default_setting', '' );
 		$this->args['redirect_url'] = apply_filters( 'wppb_redirect_default_location', wppb_curpageurl() );
         /* for register forms check to see if we have a custom redirect "Redirect After Register" */
-        if( $this->args['form_type'] == 'register' ){
-            $wppb_module_settings = get_option( 'wppb_module_settings' );
-            if ( isset( $wppb_module_settings['wppb_customRedirect'] ) && ( $wppb_module_settings['wppb_customRedirect'] == 'show' ) ){
-                $custom_redirect = get_option( 'customRedirectSettings' );
-                if ( isset( $custom_redirect['afterRegister'] ) && ( $custom_redirect['afterRegister'] == 'yes' ) && ( trim( $custom_redirect['afterRegisterTarget'] ) != '' ) ){
-                    $this->args['redirect_url'] = $this->args['custom_redirect_after_register_url'] = apply_filters( 'wppb_redirect_default_location', $custom_redirect['afterRegisterTarget'] );
+        if( PROFILE_BUILDER == 'Profile Builder Pro' ) {
+            if ($this->args['form_type'] == 'register') {
+                $wppb_module_settings = get_option('wppb_module_settings');
+                if (isset($wppb_module_settings['wppb_customRedirect']) && ($wppb_module_settings['wppb_customRedirect'] == 'show')) {
+                    $custom_redirect = get_option('customRedirectSettings');
+                    if (isset($custom_redirect['afterRegister']) && ($custom_redirect['afterRegister'] == 'yes') && (trim($custom_redirect['afterRegisterTarget']) != '')) {
+                        $this->args['redirect_url'] = $this->args['custom_redirect_after_register_url'] = apply_filters('wppb_redirect_default_location', $custom_redirect['afterRegisterTarget']);
+                    }
                 }
             }
         }
@@ -90,10 +92,10 @@ class Profile_Builder_Form_Creator{
                 $current_user_capability = apply_filters ( 'wppb_registration_user_capability', 'create_users' );
 
                 if ( current_user_can( $current_user_capability ) && $registration )
-                    $this->wppb_form_content( apply_filters( 'wppb_register_pre_form_message', '<p class="alert" id="wppb_register_pre_form_message">'.__( 'Users can register themselves or you can manually create users here.', 'profilebuilder').'</p>' ) );
+                    $this->wppb_form_content( apply_filters( 'wppb_register_pre_form_message', '<p class="alert" id="wppb_register_pre_form_message">'.__( 'Users can register themselves or you can manually create users here.', 'profilebuilder'). '<img src="'.WPPB_PLUGIN_URL.'assets/images/pencil_delete.png" title="'.__( 'This message is only visible by administrators', 'profilebuilder' ).'"/>' . '</p>' ) );
 
                 elseif ( current_user_can( $current_user_capability ) && !$registration )
-                    $this->wppb_form_content( apply_filters( 'wppb_register_pre_form_message', '<p class="alert" id="wppb_register_pre_form_message">'.__( 'Users cannot currently register themselves, but you can manually create users here.', 'profilebuilder').'</p>' ) );
+                    $this->wppb_form_content( apply_filters( 'wppb_register_pre_form_message', '<p class="alert" id="wppb_register_pre_form_message">'.__( 'Users cannot currently register themselves, but you can manually create users here.', 'profilebuilder'). '<img src="'.WPPB_PLUGIN_URL.'assets/images/pencil_delete.png" title="'.__( 'This message is only visible by administrators', 'profilebuilder' ).'"/>' . '</p>' ) );
 
                 elseif ( !current_user_can( $current_user_capability ) ){
                     global $user_ID;
@@ -183,7 +185,7 @@ class Profile_Builder_Form_Creator{
 	
 	function wppb_form_content( $message ){
 		$field_check_errors = array();
-		
+
 		if( isset( $_REQUEST['action'] ) ){
 			$field_check_errors = $this->wppb_test_required_form_values( $_REQUEST );			
 			if( empty( $field_check_errors ) ){
@@ -383,6 +385,8 @@ class Profile_Builder_Form_Creator{
 				$userdata = $this->wppb_add_custom_field_values( $global_request, $userdata, $this->args['form_fields'] );
 				$userdata['role'] = $this->args['role'];
 				$userdata['user_pass'] = wp_hash_password( $userdata['user_pass'] );
+                /* since version 2.0.7 add this meta so we know on what blog the user registered */
+                $userdata['registered_for_blog_id'] = get_current_blog_id();
                 $userdata = wp_unslash( $userdata );
 				wppb_signup_user( $userdata['user_login'], $userdata['user_email'], $userdata );
 			}
