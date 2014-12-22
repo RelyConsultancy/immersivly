@@ -4398,7 +4398,7 @@ figure {
   cursor: pointer;
   position: absolute;
   top: 14px;
-  right: 14px;
+  left: 14px;
 }
 .sidebar__logo {
   background-image: url("../img/logo.png");
@@ -4424,13 +4424,16 @@ figure {
   margin: 0.625rem 0 1.25rem;
 }
 .sidebar__desc {
+  font-family: "PT Serif", serif;
+  font-style: italic;
   font-size: 0.9375rem;
-  border-color: #fff;
+  border-color: #666;
   border-style: solid;
   border-width: 1px 0;
   line-height: 1em;
   margin: 0 0 1.25rem;
   padding: 0.625rem 0 0.75rem;
+  color: #666;
 }
 .sidebar--closed {
   width: 50px;

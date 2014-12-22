@@ -191,7 +191,7 @@ figure { margin: 0; }
     cursor: pointer;
     position: absolute;
     top: 14px;
-    right: 14px;
+    left: 14px;
   }
   &__logo {
     @include retina-bg('logo', 'png', 66px, 67px);
@@ -211,13 +211,16 @@ figure { margin: 0; }
     margin: rem-calc(10 0 20);
   }
   &__desc {
+    font-family: $font-family-serif;
+    font-style: italic;
     font-size: rem-calc(15);
-    border-color: #fff;
+    border-color: #666;
     border-style: solid;
     border-width: 1px 0;
     line-height: 1em;
     margin: rem-calc(0 0 20);
     padding: rem-calc(10 0 12);
+    color: #666;
   }
 
   &--closed {
