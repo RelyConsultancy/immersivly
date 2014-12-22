@@ -1122,6 +1122,14 @@ article { height: 100%; width: 100%; }
 
 
 // MQs
+@media #{$small-only} {
+  .subscribe-bar {
+    &__button {
+      margin: rem-calc(5 0 0);
+      width: 100%;
+    }
+  }
+}
 @media #{$small-up} { }
 
 @media #{$medium-up} {

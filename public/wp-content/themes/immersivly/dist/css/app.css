@@ -5322,6 +5322,12 @@ article {
   margin-left: 15px;
 }
 
+@media only screen and (max-width: 40em) {
+  .subscribe-bar__button {
+    margin: 0.3125rem 0 0;
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 40.063em) {
   .hero {
     height: 750px;
