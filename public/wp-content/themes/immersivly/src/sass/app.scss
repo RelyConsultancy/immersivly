@@ -194,10 +194,10 @@ figure { margin: 0; }
     right: 14px;
   }
   &__logo {
-    @include retina-bg('logo', 'png', 40px, 112px);
+    @include retina-bg('logo', 'png', 66px, 67px);
     background-repeat: no-repeat;
-    width: 40px;
-    height: 112px;
+    width: 66px;
+    height: 67px;
     display: inline-block;
     text-indent: -999em;
   }
