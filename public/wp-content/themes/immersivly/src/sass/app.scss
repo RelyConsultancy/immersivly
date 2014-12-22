@@ -405,6 +405,42 @@ figure { margin: 0; }
   }
 }
 
+.trending-badge {
+  font-size: rem-calc(19);
+  height: rem-calc(29);
+  line-height: rem-calc(27);
+  display: inline-block;
+  padding: rem-calc(0 6);
+  position: relative;
+  margin: rem-calc(0 0 30 33);
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+
+  &:before {
+    font-family: 'icomoon';
+    background: #fff;
+    color: #000;
+    width: rem-calc(29);
+    height: rem-calc(29);
+    padding: rem-calc(0 5);
+    line-height: rem-calc(29);
+    font-size: rem-calc(13);
+    position: absolute;
+    left: rem-calc(-33);
+    top: 0;
+    display: block;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    display: block;
+  }
+}
 
 
 // -- Homepage isotope grid

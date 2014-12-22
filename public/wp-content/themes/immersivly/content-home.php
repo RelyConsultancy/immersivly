@@ -34,6 +34,9 @@
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header> -->
 		<div class="title">
+			<p class="trending-badge icon-trending">
+				Trending
+			</p>
 			<?php if ( get_field('article_short_title') ) : ?>
 				<h2 class="title__entry"><?php the_field('article_short_title'); ?></h2>
 			<?php else : ?>
