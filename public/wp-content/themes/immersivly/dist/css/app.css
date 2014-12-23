@@ -4132,34 +4132,9 @@ th.hide-for-touch {
   transform: translate3d(0, 70%, 0);
 }
 
-.effect-milo:hover h2 {
-  -webkit-transform: translate3d(0, -100px, 0);
-  transform: translate3d(0, -100px, 0);
-}
-.effect-milo:hover p {
-  opacity: 1;
-  -webkit-transform: translate3d(0, -80px, 0);
-  transform: translate3d(0, -80px, 0);
-}
-
-.news article:hover:before {
-  background: rgba(122, 34, 119, 0.5);
-}
-.health article:hover:before {
-  background: rgba(77, 120, 187, 0.5);
-}
-.tech article:hover:before {
-  background: rgba(232, 55, 141, 0.3);
-}
-
 .effect-opacity img {
   transition: opacity 300ms ease-out;
   -webkit-backface-visibility: hidden;
-}
-.effect-opacity:hover img {
-  opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
 }
 
 /* Overlay style */
@@ -4269,6 +4244,60 @@ th.hide-for-touch {
 
   .overlay ul li {
     min-height: 34px;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .effect-milo h2 {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+  }
+  .effect-milo p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -80px, 0);
+    transform: translate3d(0, -80px, 0);
+  }
+
+  .news article:before {
+    background: rgba(122, 34, 119, 0.5) !important;
+  }
+  .health article:before {
+    background: rgba(77, 120, 187, 0.5) !important;
+  }
+  .tech article:before {
+    background: rgba(232, 55, 141, 0.3) !important;
+  }
+
+  .effect-opacity img {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  .effect-milo:hover h2 {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+  }
+  .effect-milo:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -80px, 0);
+    transform: translate3d(0, -80px, 0);
+  }
+
+  .news article:hover:before {
+    background: rgba(122, 34, 119, 0.5);
+  }
+  .health article:hover:before {
+    background: rgba(77, 120, 187, 0.5);
+  }
+  .tech article:hover:before {
+    background: rgba(232, 55, 141, 0.3);
+  }
+
+  .effect-opacity:hover img {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
   }
 }
 .home {

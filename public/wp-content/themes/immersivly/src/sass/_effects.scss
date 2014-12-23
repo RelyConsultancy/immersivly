@@ -20,43 +20,12 @@
   transform: translate3d(0, 70% ,0);
 }
 
-.effect-milo {
-  &:hover {
-    h2 {
-      -webkit-transform: translate3d(0, -100px, 0);
-      transform: translate3d(0, -100px ,0);
-    }
-    p {
-      opacity: 1;
-      -webkit-transform: translate3d(0, -80px, 0);
-      transform: translate3d(0, -80px, 0);
-    }
-  }
-}
-
-// Hover colours
-article:hover:before {
-  .news & {
-    background: rgba(categories(news), .5);
-  }
-  .health & {
-    background: rgba(categories(health), .5);
-  }
-  .tech & {
-    background: rgba(categories(tech), .3);
-  }
-}
 
 // Opacity
 .effect-opacity {
   img {
     @include single-transition(opacity);
     -webkit-backface-visibility: hidden;
-  }
-  &:hover {
-    img {
-      @include opacity(.8);
-    }
   }
 }
 
@@ -179,5 +148,77 @@ article:hover:before {
   }
   .overlay ul li {
     min-height: 34px;
+  }
+}
+
+@media #{$small-medium-only} {
+  .effect-milo {
+    h2 {
+      -webkit-transform: translate3d(0, -100px, 0);
+      transform: translate3d(0, -100px ,0);
+    }
+    p {
+      opacity: 1;
+      -webkit-transform: translate3d(0, -80px, 0);
+      transform: translate3d(0, -80px, 0);
+    }
+  }
+
+  // Hover colours - TODO: refactor to remove !important (?)
+  article:before {
+    .news & {
+      background: rgba(categories(news), .5) !important;
+    }
+    .health & {
+      background: rgba(categories(health), .5) !important;
+    }
+    .tech & {
+      background: rgba(categories(tech), .3) !important;
+    }
+  }
+
+  // Opacity
+  .effect-opacity {
+      img {
+        @include opacity(.8);
+      }
+  }
+}
+
+@media #{$large-up} {
+  .effect-milo {
+    &:hover {
+      h2 {
+        -webkit-transform: translate3d(0, -100px, 0);
+        transform: translate3d(0, -100px ,0);
+      }
+      p {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -80px, 0);
+        transform: translate3d(0, -80px, 0);
+      }
+    }
+  }
+
+  // Hover colours
+  article:hover:before {
+    .news & {
+      background: rgba(categories(news), .5);
+    }
+    .health & {
+      background: rgba(categories(health), .5);
+    }
+    .tech & {
+      background: rgba(categories(tech), .3);
+    }
+  }
+
+  // Opacity
+  .effect-opacity {
+    &:hover {
+      img {
+        @include opacity(.8);
+      }
+    }
   }
 }
