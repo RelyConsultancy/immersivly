@@ -4145,11 +4145,9 @@ th.hide-for-touch {
 .news article:hover:before {
   background: rgba(122, 34, 119, 0.5);
 }
-
 .health article:hover:before {
   background: rgba(77, 120, 187, 0.5);
 }
-
 .tech article:hover:before {
   background: rgba(232, 55, 141, 0.3);
 }

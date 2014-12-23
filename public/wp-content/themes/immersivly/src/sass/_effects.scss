@@ -35,25 +35,15 @@
 }
 
 // Hover colours
-.news {
-  article:hover {
-    &:before {
-      background: rgba(categories(news), .5);
-    }
+article:hover:before {
+  .news & {
+    background: rgba(categories(news), .5);
   }
-}
-.health {
-  article:hover {
-    &:before {
-      background: rgba(categories(health), .5);
-    }
+  .health & {
+    background: rgba(categories(health), .5);
   }
-}
-.tech {
-  article:hover {
-    &:before {
-      background: rgba(categories(tech), .3);
-    }
+  .tech & {
+    background: rgba(categories(tech), .3);
   }
 }
 
