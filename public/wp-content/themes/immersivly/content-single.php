@@ -4,10 +4,10 @@
  */
 ?>
 
-
 <?php $category = get_the_category(); ?>
-
-
+<?php $user_ID = get_current_user_id(); ?>
+<?php $current_url = $_SERVER['REQUEST_URI']; ?>
+<?php include_once(IMM_BASE_PATH . '/inc/helpers.php'); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="hero" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);">
@@ -50,7 +50,17 @@
 
 				<ul class="article-info no-bullet">
 					<li><i class="icon-time"></i><?php post_read_time(); ?> reading time</li>
-					<li><a href="javascript:;"><span class="article-info__save"><i class="icon-star"></i></span>Save for later</a></li>
+					<?php if (is_user_logged_in() && immersivly_check_if_post_is_not_saved($user_ID, $post->ID)) : ?>
+						<li>
+							Post already saved.
+						</li>
+					<?php elseif (is_user_logged_in()) : ?>
+						<li>
+							<a href="javascript:;" id="article-save-for-later" data-userID="<?php print $user_ID; ?>" data-articleID = "<?php the_ID(); ?> " data-articleUrl="<?php print $current_url; ?>">
+								<span class="article-info__save"><i class="icon-star"></i></span>Save for later
+							</a>
+						</li>
+					<?php endif; ?>
 				</ul>
 			</div>
 		</div>
