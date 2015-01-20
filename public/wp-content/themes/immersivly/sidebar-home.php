@@ -48,7 +48,7 @@
 		<?php if ( is_user_logged_in() ) : ?>
 			<li><a class="user-actions__link" href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout"><?php _e('Logout'); ?></a></li>
 		<?php else : ?>
-			<li><a class="user-actions__link js-trigger-overlay" href="#"><?php _e('Login'); ?></a></li>
+			<li><a class="user-actions__link" href="<?php echo esc_url( home_url( '/login' ) ); ?>"><?php _e('Login'); ?></a></li>
 			<li><a class="user-actions__link" href="<?php echo esc_url( home_url( '/register' ) ); ?>" title="Register"><?php _e('Register'); ?></a></li>
 		<?php endif; ?>
 	</ul>
