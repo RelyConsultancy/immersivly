@@ -17,12 +17,10 @@ if (!is_user_logged_in()) {
 // If the user is logged in, get his ID.
 else {
 	include_once(IMM_BASE_PATH . '/inc/helpers.php');
-	$current_user_ID = get_current_user_id();
-	$user_saved_posts = immersivly_retrieve_post_for_user($current_user_ID);
+	$current_user_id = get_current_user_id();
+	$user_saved_posts = immersivly_retrieve_post_for_user($current_user_id);
 }
-
 ?>
-
 
 <?php get_header(); ?>
 
@@ -35,8 +33,10 @@ else {
 						<h2>Below you have the list of saved articles</h2>
 					<?php
 						foreach ($user_saved_posts as $key => $user_saved_post) {
-							print $key . '. ';
-							print '<a href="' . home_url() . $user_saved_post->article_url . '">' . $user_saved_post->article_title . '</a></br>';
+							print '<div class="saved-article-' . $user_saved_post->article_id. '">';
+							print '<a href="' . home_url() . $user_saved_post->article_url . '" target="__blank">' . $user_saved_post->article_title . '</a> ';
+							print ' | <a id="' . $user_saved_post->article_id . '" class="remove-post-button" data-userID="' . $current_user_id. '" href="javascript:;">Remove post from list</a></br>';
+							print '</div>';
 						}
 					?>
 					</div>

@@ -46,6 +46,33 @@ function immersive_save_for_later() {
 	die();
 }
 
+/**
+ * Ajax callback for the "Removed saved post" functionality.
+ */
+function immersive_remove_saved_post() {
+	// Initialize the Word Press database wrapper.
+	global $wpdb;
+
+	// Get the custom table which will hold the required date.
+	$immersive_table = $wpdb->prefix . 'immersive_save_for_later';
+
+	// Get the required data.
+	$article_id = $_POST['article_id'];
+	$user_id = $_POST['user_id'];
+
+	// Execute the deletion query.
+	$wpdb->query("DELETE FROM {$immersive_table} WHERE article_id={$article_id} AND user_id={$user_id}");
+
+	// Return the article id. Used to replace the div containing the respective
+	// post, with a default message.
+	echo $article_id;
+
+	die();
+}
+
 // Add the custom actions the the wp_ajax layer.
 add_action('wp_ajax_immersive_save_for_later', 'immersive_save_for_later');
 add_action('wp_ajax_nopriv_immersive_save_for_later', 'immersive_save_for_later');
+
+add_action('wp_ajax_immersive_remove_saved_post', 'immersive_remove_saved_post');
+add_action('wp_ajax_nopriv_immersive_remove_saved_post', 'immersive_remove_saved_post');
