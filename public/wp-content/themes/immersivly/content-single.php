@@ -28,8 +28,8 @@
 						<span class="actions--comments"><i class="icon-comment"></i> <?php comments_number( 0, 1, '%' ); ?></span>
 					</li>
 				</ul>
-				
-				
+
+
 				<?php if ( get_field('article_short_title') ) : ?>
 					<h1 class="hero__title"><?php the_field('article_short_title'); ?></h1>
 				<?php else : ?>
@@ -69,7 +69,7 @@
 
 
 	<div class="entry-content entry-content--<?php echo $category[0]->category_nicename; ?>">
-		<div class="gap" style="paddinb-bottom: 20px;">
+		<div class="gap" style="padding-bottom: 20px;">
 			<div class="row collapse">
 				<div class="small-12 medium-10 medium-centered columns">
 					<div class="row">
@@ -80,7 +80,7 @@
 						</div>
 						<div class="small-12 medium-3 columns">
 							<?php // get_sidebar(); ?>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
@@ -89,7 +89,7 @@
 		<?php if ( get_field('article_slider') && !get_field('article_secondary_image') ) : ?>
             <section class="media media_picture" style="height: auto;">
             <ul class="bxslider">
-                <?php 
+                <?php
                     $rows = get_field('article_slider');
                     if ( $rows ) {
                         foreach( $rows as $row ) {
@@ -99,6 +99,7 @@
                 ?>
             </ul>
             </section>
+            <div class="bx-wrapper bx-custom-pager"></div>
         <?php endif; ?>
 
 
@@ -128,7 +129,7 @@
 				</section>
 			<?php endif; ?>
 		<?php endif; ?>
-	
+
 		<div class="gap">
         <br>
 			<div class="row collapse">
@@ -140,12 +141,12 @@
 						<div class="small-12 medium-5 large-3 columns">
 							<?php get_sidebar(); ?>
 							<?php related_entries(array('use_template'=>true, 'template_file'=>'yarpp-template-example.php')); ?>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

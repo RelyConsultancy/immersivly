@@ -655,11 +655,46 @@ figure { margin: 0; }
   }
 }
 
+.media_picture {
+  margin: 0;
+
+  img {
+    width: 100%;
+  }
+}
+.bx-wrapper {
+  margin-bottom: 0;
+
+  .bx-viewport {
+    left: 0;
+  }
+  .bx-controls-direction {
+    a {
+      top: 10px;
+      left: auto;
+      right: 10px;
+      margin-top: 0;
+      z-index: 0;
+    }
+    .bx-prev {
+      right: 45px;
+    }
+  }
+  .bx-next,
+  .bx-prev {
+    background-image: url('../img/bx-controls.png');
+  }
+}
+.bx-custom-pager {
+  .bx-pager {
+    background: #fff;
+    position: static;
+    padding: 20px 0 10px;
+  }
+}
 section.stuck {
   position: fixed;
-  // left: 200px;
-  // width: 100vw;
-  top: -10px !important;
+  top: 0;
 }
 
 .parallax-image-wrapper {
