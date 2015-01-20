@@ -20,3 +20,15 @@ function immersivly_check_if_post_is_not_saved($user_id, $post_id) {
 	// If the post wasn't already saved, return TRUE. FALSE otherwise.
 	return empty($result) ? FALSE : TRUE;
 }
+
+function immersivly_retrieve_post_for_user($user_id) {
+	// Initialize the Word Press database wrapper.
+	global $wpdb;
+	// Get the custom table name.
+	$table_name = $wpdb->prefix . 'immersive_save_for_later';
+	// Check if the user with the supplied user ID has already "Saved for later"
+	// the post with the supplied ID.
+	$results = $wpdb->get_results( "SELECT * FROM {$table_name} WHERE user_id = {$user_id} ", OBJECT );
+
+	return !empty($results) ? $results : FALSE;
+}
