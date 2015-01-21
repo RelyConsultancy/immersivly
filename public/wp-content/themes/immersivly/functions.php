@@ -377,3 +377,71 @@ add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
     add_post_type_support( 'page', 'excerpt' );
 }
+
+function immersivly_numeric_posts_nav() {
+    if ( is_singular() ) {
+        return;
+    }
+    global $wp_query;
+
+    if ( $wp_query->max_num_pages <= 1 ) {
+        return;
+    }
+    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+    $max   = intval( $wp_query->max_num_pages );
+
+    if ( $paged >= 1 ) {
+        $links[] = $paged;
+    }
+
+    if ( $paged >= 3 ) {
+        $links[] = $paged - 1;
+        $links[] = $paged - 2;
+    }
+    if ( ( $paged + 2 ) <= $max ) {
+        $links[] = $paged + 2;
+        $links[] = $paged + 1;
+    }
+    print '<div class="column">';
+    print '<div class="pagination clearfix">';
+
+    print get_previous_posts_link('');
+
+    if ( ! in_array( 1, $links ) ) {
+        $class = 1 == $paged ? ' class="pagination__item pagination__item--active"' : 'class="pagination__item"';
+        print '<a href="' . esc_url( get_pagenum_link( 1 ) ) . '" ' . $class . '">1</a>';
+        if ( ! in_array( 2, $links ) ) {
+            print '…';
+        }
+    }
+
+    sort( $links );
+    foreach ( (array) $links as $link ) {
+        $class = $paged == $link ? ' class="pagination__item pagination__item--active"' : 'class="pagination__item"';
+        print '<a href="' . esc_url( get_pagenum_link( $link ) ) . '" ' . $class . '">' . $link . '</a>';
+    }
+
+    if ( ! in_array( $max, $links ) ) {
+        if ( ! in_array( $max - 1, $links ) ) {
+            print '<li>…</li>' . "\n";
+        }
+        $class = $paged == $max ? ' class="pagination__item pagination__item--active"' : 'class="pagination__item"';
+        print '<a href="' . esc_url( get_pagenum_link( $max ) ) . '" ' . $class . '>' . $max . '</a>';
+    }
+
+    print get_next_posts_link('');
+
+    print "\n";
+
+    print '</div></div>';
+}
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes_next');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes_previous');
+
+function posts_link_attributes_previous() {
+    return 'class="pagination__arrow icon-arrow-left"';
+}
+function posts_link_attributes_next() {
+    return 'class="pagination__arrow icon-arrow-right"';
+}

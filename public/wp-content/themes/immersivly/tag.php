@@ -37,24 +37,9 @@ get_header(); ?>
 						 */
 						get_template_part( 'content', 'block' );
 						?>
-
 					<?php endwhile; ?>
 
-					<div class="column">
-						<div class="pagination clearfix">
-							<a href="#" class="pagination__arrow icon-arrow-left"></a>
-							<a href="#" class="pagination__item">1</a>
-							<a href="#" class="pagination__item pagination__item--active">2</a>
-							<a href="#" class="pagination__item">3</a>
-							<a href="#" class="pagination__item">4</a>
-							<a href="#" class="pagination__item">5</a>
-							<a href="#" class="pagination__item">6</a>
-							<a href="#" class="pagination__item">7</a>
-							<a href="#" class="pagination__item">8</a>
-							<a href="#" class="pagination__arrow icon-arrow-right"></a>
-						</div>
-					</div>
-
+					<?php immersivly_numeric_posts_nav(); ?>
 
 					<?php immersivly_paging_nav(); ?>
 

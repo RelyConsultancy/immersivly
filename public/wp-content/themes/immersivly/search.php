@@ -41,6 +41,8 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
+					<?php immersivly_numeric_posts_nav(); ?>
+
 					<?php immersivly_paging_nav(); ?>
 
 				<?php else : ?>

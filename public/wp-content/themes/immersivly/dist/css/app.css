@@ -4496,6 +4496,7 @@ figure {
   margin-top: 2.1875rem;
   padding-top: 2.1875rem;
   border-top: 1px solid #222;
+  margin-bottom: 2.1875rem;
 }
 .pagination__item, .pagination__arrow {
   display: inline-block;
@@ -4517,6 +4518,10 @@ figure {
 .pagination__arrow {
   background: #f2f2f2;
   font-size: 0.625rem;
+}
+/* Hide the default pagin navigation as it's not needed. */
+.paging-navigation {
+  display: none;
 }
 
 .footer {
