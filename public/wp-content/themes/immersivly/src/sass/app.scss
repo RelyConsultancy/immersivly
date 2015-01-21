@@ -957,6 +957,9 @@ section.stuck {
   border-style: solid;
   border-color: $base;
   border-width: 1px 0;
+  background: #fff;
+  position: relative;
+
   input { margin-bottom: 0; }
   &__label {
     font-weight: 700;

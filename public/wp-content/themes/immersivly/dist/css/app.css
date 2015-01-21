@@ -5163,6 +5163,8 @@ section.stuck {
   border-style: solid;
   border-color: #AAAAAA;
   border-width: 1px 0;
+  background: #fff;
+  position: relative;
 }
 .subscribe-bar input {
   margin-bottom: 0;
