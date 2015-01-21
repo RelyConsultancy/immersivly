@@ -4881,9 +4881,43 @@ figure {
   background-position: center top;
 }
 
+.media_picture {
+  margin: 0;
+}
+.media_picture img {
+  width: 100%;
+}
+
+.bx-wrapper {
+  margin-bottom: 0;
+}
+.bx-wrapper .bx-viewport {
+  left: 0;
+}
+.bx-wrapper .bx-controls-direction a {
+  top: 10px;
+  left: auto;
+  right: 10px;
+  margin-top: 0;
+  z-index: 0;
+}
+.bx-wrapper .bx-controls-direction .bx-prev {
+  right: 45px;
+}
+.bx-wrapper .bx-next,
+.bx-wrapper .bx-prev {
+  background-image: url("../img/bx-controls.png");
+}
+
+.bx-custom-pager .bx-pager {
+  background: #fff;
+  position: static;
+  padding: 20px 0 10px;
+}
+
 section.stuck {
   position: fixed;
-  top: -10px !important;
+  top: 0;
 }
 
 .parallax-image-wrapper {
@@ -5131,6 +5165,8 @@ section.stuck {
   border-style: solid;
   border-color: #AAAAAA;
   border-width: 1px 0;
+  background: #fff;
+  position: relative;
 }
 .subscribe-bar input {
   margin-bottom: 0;
