@@ -41,8 +41,6 @@ get_header(); ?>
 
 					<?php immersivly_numeric_posts_nav(); ?>
 
-					<?php immersivly_paging_nav(); ?>
-
 				<?php else : ?>
 
 					<?php get_template_part( 'content', 'none' ); ?>

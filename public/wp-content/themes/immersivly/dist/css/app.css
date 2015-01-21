@@ -4519,10 +4519,6 @@ figure {
   background: #f2f2f2;
   font-size: 0.625rem;
 }
-/* Hide the default pagin navigation as it's not needed. */
-.paging-navigation {
-  display: none;
-}
 
 .footer {
   padding: 2.1875rem 0;
