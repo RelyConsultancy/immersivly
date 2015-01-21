@@ -4496,6 +4496,7 @@ figure {
   margin-top: 2.1875rem;
   padding-top: 2.1875rem;
   border-top: 1px solid #222;
+  margin-bottom: 2.1875rem;
 }
 .pagination__item, .pagination__arrow {
   display: inline-block;
@@ -4506,6 +4507,7 @@ figure {
   line-height: 2.25rem;
   font-weight: bold;
   border-radius: 0.25rem;
+  margin: 0 0.125rem;
 }
 .pagination__item:hover, .pagination__item--active, .pagination__arrow:hover, .pagination__arrow--active {
   background: #999;
