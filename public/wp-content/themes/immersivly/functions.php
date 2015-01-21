@@ -411,7 +411,7 @@ function immersivly_numeric_posts_nav() {
         $class = 1 == $paged ? ' class="pagination__item pagination__item--active"' : 'class="pagination__item"';
         print '<a href="' . esc_url( get_pagenum_link( 1 ) ) . '" ' . $class . '">1</a>';
         if ( ! in_array( 2, $links ) ) {
-            print '…';
+            print '<span class="pagination__ellipsis">…</span>';
         }
     }
 
@@ -423,7 +423,7 @@ function immersivly_numeric_posts_nav() {
 
     if ( ! in_array( $max, $links ) ) {
         if ( ! in_array( $max - 1, $links ) ) {
-            print '<li>…</li>' . "\n";
+            print '<span class="pagination__ellipsis">…</span>' . "\n";
         }
         $class = $paged == $max ? ' class="pagination__item pagination__item--active"' : 'class="pagination__item"';
         print '<a href="' . esc_url( get_pagenum_link( $max ) ) . '" ' . $class . '>' . $max . '</a>';
