@@ -49,5 +49,5 @@ get_header(); ?>
 
 	</div>
 </div>
-
+<?php get_template_part( 'partial-newsletter');?>
 <?php get_footer(); ?>
