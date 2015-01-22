@@ -179,9 +179,10 @@
 
 
       // Sticky
-      if ( !isMobile ) {
+      var mp = $('.videobg, .media_picture');
+      if ( !isMobile && mp.length > 0) {
         var sticky = new Waypoint.Sticky({
-          element: $('.videobg, .media_picture')[0]
+          element: mp[0]
         });
       }
 
