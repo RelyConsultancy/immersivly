@@ -289,6 +289,80 @@ figure { margin: 0; }
   }
 }
 
+
+// - Access forms
+
+.access-form {
+  margin-bottom: rem-calc(140);
+
+  legend {
+    display: none;
+  }
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .text {
+    font-size: rem-calc(16);
+    color: #444;
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    margin-bottom: rem-calc(8);
+  }
+  .req {
+    color: inherit;
+    font-size: inherit;
+  }
+  .req-text {
+    display: none;
+  }
+  .div_text {
+    width: 100%;
+    max-width: rem-calc(600);
+
+    input {
+      border-color: #999;
+      border-radius: 1px;
+      color: #444;
+      font-size: rem-calc(16);
+      font-family: $font-family-sans-serif;
+      font-weight: 300;
+      height: rem-calc(42);
+      line-height: rem-calc(42);
+      padding: rem-calc(0 10);
+      box-shadow: inset -1px -1px 0 0 #c4c4c4;
+
+      &:focus {
+        box-shadow: inset -1px -1px 0 0 #c4c4c4;
+        background: inherit
+      }
+    }
+  }
+  .button_div {
+    margin-top: rem-calc(50);
+  }
+  .buttons {
+    height: rem-calc(36);
+    line-height: rem-calc(34);
+    font-size: rem-calc(17);
+    font-weight: 500;
+    color: #fff;
+    background: #959595;
+    border-radius: 2px;
+    font-family: $font-family-sans-serif;
+    padding: rem-calc(0 18);
+    margin-right: rem-calc(10);
+    cursor: pointer;
+    border: 0;
+
+    &[name="reset"] {
+      background: #bbb;
+    }
+  }
+}
+
+
 // - Footer
 .footer {
   padding: rem-calc(35 0);

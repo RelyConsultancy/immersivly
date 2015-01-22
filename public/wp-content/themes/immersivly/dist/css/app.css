@@ -4521,6 +4521,72 @@ figure {
   font-size: 0.625rem;
 }
 
+.access-form {
+  margin-bottom: 8.75rem;
+}
+.access-form legend {
+  display: none;
+}
+.access-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.access-form .text {
+  font-size: 1rem;
+  color: #444;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.access-form .req {
+  color: inherit;
+  font-size: inherit;
+}
+.access-form .req-text {
+  display: none;
+}
+.access-form .div_text {
+  width: 100%;
+  max-width: 37.5rem;
+}
+.access-form .div_text input {
+  border-color: #999;
+  border-radius: 1px;
+  color: #444;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  height: 2.625rem;
+  line-height: 2.625rem;
+  padding: 0 0.625rem;
+  box-shadow: inset -1px -1px 0 0 #c4c4c4;
+}
+.access-form .div_text input:focus {
+  box-shadow: inset -1px -1px 0 0 #c4c4c4;
+  background: inherit;
+}
+.access-form .button_div {
+  margin-top: 3.125rem;
+}
+.access-form .buttons {
+  height: 2.25rem;
+  line-height: 2.125rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: #fff;
+  background: #959595;
+  border-radius: 2px;
+  font-family: "Lato", sans-serif;
+  padding: 0 1.125rem;
+  margin-right: 0.625rem;
+  cursor: pointer;
+  border: 0;
+}
+.access-form .buttons[name="reset"] {
+  background: #bbb;
+}
+
 .footer {
   padding: 2.1875rem 0;
 }

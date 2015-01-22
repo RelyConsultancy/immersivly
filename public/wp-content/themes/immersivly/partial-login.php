@@ -16,6 +16,8 @@
 				</form>
 				<?php dynamic_sidebar( 'overlay' ); ?> -->
 
-		<?php echo do_shortcode( '[wp-members page="login"]' ); ?>
+        <div class="access-form login-form">
+            <?php echo do_shortcode( '[wp-members page="login"]' ); ?>
+        </div>
 	</div>
 </div>
