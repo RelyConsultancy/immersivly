@@ -445,3 +445,14 @@ function posts_link_attributes_previous() {
 function posts_link_attributes_next() {
     return 'class="pagination__arrow icon-arrow-right"';
 }
+
+
+add_filter( 'wpmem_login_form_args',    'remove_wpmem_txt_code' );
+add_filter( 'wpmem_register_form_args', 'remove_wpmem_txt_code' );
+function remove_wpmem_txt_code( $args ){
+    $args = array(
+        'txt_before' => '',
+        'txt_after'  => ''
+    );
+    return $args;
+}
