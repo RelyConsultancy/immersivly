@@ -230,6 +230,14 @@
 
         IMM.config.$triggerBtn.on('click', function( event ) {
           event.preventDefault();
+
+          $('.overlay__inner').hide();
+
+          switch($(this).attr('id')) {
+            case 'more-link': $('#nav').show(); break;
+            case 'login-link': $('#login').show(); break;
+          }
+
           self.toggleOverlay();
         });
         IMM.config.$closeBttn.on('click', function( event ) {
