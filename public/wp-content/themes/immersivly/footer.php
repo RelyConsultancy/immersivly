@@ -39,12 +39,12 @@
 	<div id="login" class="overlay__inner">
 		<div class="row">
 			<div class="small-12 medium-6 medium-centered columns">
-				<!-- <form action="#" style="padding-top: 20%;">
+<!-- 				<form action="#" style="padding-top: 20%;">
 					<input type="text" placeholder="Email address">
-				</form> -->
-				<?php //dynamic_sidebar( 'overlay' ); ?>
+				</form>
+				<?php dynamic_sidebar( 'overlay' ); ?> -->
 
-				<?php //echo do_shortcode( '[wp-members page="register"]' ); ?>
+				<?php echo do_shortcode( '[wp-members page="login"]' ); ?>
 			</div>
 		</div>
 	</div>
