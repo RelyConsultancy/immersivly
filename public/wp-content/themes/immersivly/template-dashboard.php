@@ -19,6 +19,8 @@ else {
 	include_once(IMM_BASE_PATH . '/inc/helpers.php');
 	$current_user_id = get_current_user_id();
 	$user_saved_posts = immersivly_retrieve_post_for_user($current_user_id);
+	global $current_user;
+	get_currentuserinfo();
 }
 ?>
 
@@ -30,16 +32,17 @@ else {
 			<div class="dashboard-saved-posts">
 				<?php if ($user_saved_posts) : ?>
 					<div class="dashboard-saved-posts-list">
+						<h1>Welcome <?php print $current_user->display_name; ?></h1>
 						<h2>Below you have the list of saved articles</h2>
 						<ul>
-					<?php
-						foreach ($user_saved_posts as $key => $user_saved_post) {
-							print '<li class="saved-article-' . $user_saved_post->article_id. '">';
-							print '<a href="' . home_url() . $user_saved_post->article_url . '" target="__blank">' . $user_saved_post->article_title . '</a> ';
-							print ' | <a id="' . $user_saved_post->article_id . '" class="remove-post-button" data-userID="' . $current_user_id. '" href="javascript:;">Remove post from list</a></br>';
-							print '</li>';
-						}
-					?>
+							<?php
+								foreach ($user_saved_posts as $key => $user_saved_post) {
+									print '<li class="saved-article-' . $user_saved_post->article_id. '">';
+									print '<a href="' . home_url() . $user_saved_post->article_url . '" target="__blank">' . $user_saved_post->article_title . '</a> ';
+									print ' | <a id="' . $user_saved_post->article_id . '" class="remove-post-button" data-userID="' . $current_user_id. '" href="javascript:;">Remove post from list</a></br>';
+									print '</li>';
+								}
+							?>
 						</ul>
 					</div>
 				<?php else : ?>
