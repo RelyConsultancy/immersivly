@@ -452,7 +452,8 @@ add_filter( 'wpmem_register_form_args', 'remove_wpmem_txt_code' );
 function remove_wpmem_txt_code( $args ){
     $args = array(
         'txt_before' => '',
-        'txt_after'  => ''
+        'txt_after'  => '',
+        'show_clear_form' => FALSE,
     );
     return $args;
 }
