@@ -370,7 +370,8 @@ figure { margin: 0; }
   width: 100%;
 
   .logo {
-    background: center top no-repeat url('../img/logo.png');
+    @include retina-bg('logo', 'png', 66px, 66px);
+    background-position: center top;
     min-height: 66px;
     min-width: 66px;
     padding-top: 75px;

@@ -4597,7 +4597,9 @@ figure {
   width: 100%;
 }
 .login-form .logo {
-  background: center top no-repeat url("../img/logo.png");
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center top;
   min-height: 66px;
   min-width: 66px;
   padding-top: 75px;
@@ -4606,6 +4608,12 @@ figure {
   color: #1d1d1b;
   font-weight: 300;
   display: inline-block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+  .login-form .logo {
+    background-image: url("../img/logo@2x.png");
+    background-size: 66px 66px;
+  }
 }
 .login-form h4 {
   font-size: 1rem;
