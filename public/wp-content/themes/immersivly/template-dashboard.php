@@ -50,7 +50,7 @@ else {
 									<?php foreach ($user_saved_posts as $key => $user_saved_post): ?>
 										<li class="saved-article-<? echo $user_saved_post->article_id; ?>">
 											<a class="saved-article" href="<?php echo home_url() . $user_saved_post->article_url; ?>" target="_blank"><?php echo $user_saved_post->article_title; ?></a>
-											<a id="<?php echo $user_saved_post->article_id ?>" class="remove-post-button" data-userID="<?php $current_user_id ?>" href="javascript:;" title="Remove article"></a>
+											<a id="<?php echo $user_saved_post->article_id ?>" class="remove-post-button" data-userID="<?php print $current_user_id; ?>" href="javascript:;" title="Remove article"></a>
 										</li>
 									<?php endforeach; ?>
 								</ul>
