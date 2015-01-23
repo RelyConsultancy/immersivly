@@ -3,7 +3,7 @@
  * Update the database, adding a custom table for the number of shares.
  */
 function immersive_update_db() {
-	$immersive_db_version = '1.2';
+	$immersive_db_version = '1.3';
 	if ( get_site_option( 'immersive_db_version' ) != $immersive_db_version ) {
 		// Initialize the Word Press database wrapper.
 		global $wpdb;
@@ -19,6 +19,7 @@ function immersive_update_db() {
 			id mediumint(9) NOT NULL AUTO_INCREMENT,
 			article_id mediumint(9) NOT NULL,
 			number_of_shares mediumint(9) NOT NULL,
+			number_of_shares_fake mediumint(9) NOT NULL,
 			UNIQUE KEY id (id)
 		) $charset_collate;";
 

@@ -84,9 +84,16 @@ function immersivly_update_number_of_shares() {
 	// Update the number of shares.
 	$wpdb->query("UPDATE {$table_name} SET number_of_shares = number_of_shares + 1 WHERE article_id = {$article_id}");
 	// Return the new number of shares, for updating the display.
-	$result = $wpdb->get_results( "SELECT number_of_shares FROM {$table_name} WHERE article_id = {$article_id} ", OBJECT );
+	$result = $wpdb->get_results( "SELECT number_of_shares, number_of_shares_fake FROM {$table_name} WHERE article_id = {$article_id} ", OBJECT );
 	$shares = array_pop($result);
-	echo $shares->number_of_shares;
+	$number_of_shares = $shares->number_of_shares;
+
+	if ($number_of_shares > 50) {
+		echo $number_of_shares;
+	}
+	else {
+		echo $shares->number_of_shares_fake;
+	}
 
 	die();
 }

@@ -69,12 +69,18 @@ function immersivly_get_the_number_of_shares($post_id) {
 	// 50) and save the data to the DB.
 	if (empty($results)) {
 		$number_of_shares = rand(25, 50);
-		$wpdb->query("INSERT INTO {$table_name} (article_id, number_of_shares) VALUES ({$post_id}, {$number_of_shares})");
+		$wpdb->query("INSERT INTO {$table_name} (article_id, number_of_shares, number_of_shares_fake) VALUES ({$post_id}, 0, {$number_of_shares})");
 
 		return $number_of_shares;
 	}
 	else {
 		$result = array_pop($results);
-		return $result->number_of_shares;
+		$shares = $result->number_of_shares;
+		if ($shares > 50) {
+			return $shares;
+		}
+		else {
+			return $result->number_of_shares_fake;
+		}
 	}
 }
