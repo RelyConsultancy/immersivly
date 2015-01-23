@@ -30,7 +30,6 @@ else {
 	<div class="content">
 		<div class="row collapse">
 			<div class="dashboard-saved-posts">
-				<?php if ($user_saved_posts) : ?>
 					<div class="dashboard-saved-posts-list">
 						<section class="content--highlighted">
 							<div class="row">
@@ -44,22 +43,23 @@ else {
 
 						<div class="row">
 							<div class="small-12 medium-10 medium-centered columns">
-								<h4 class="content--block__subtitle">Saved articles</h4>
+								<?php if ($user_saved_posts) : ?>
+									<h4 class="content--block__subtitle">Saved articles</h4>
 
-								<ul>
-									<?php foreach ($user_saved_posts as $key => $user_saved_post): ?>
-										<li class="saved-article-<? echo $user_saved_post->article_id; ?>">
-											<a class="saved-article" href="<?php echo home_url() . $user_saved_post->article_url; ?>" target="_blank"><?php echo $user_saved_post->article_title; ?></a>
-											<a id="<?php echo $user_saved_post->article_id ?>" class="remove-post-button" data-userID="<?php print $current_user_id; ?>" href="javascript:;" title="Remove article"></a>
-										</li>
-									<?php endforeach; ?>
-								</ul>
+									<ul>
+										<?php foreach ($user_saved_posts as $key => $user_saved_post): ?>
+											<li class="saved-article-<? echo $user_saved_post->article_id; ?>">
+												<a class="saved-article" href="<?php echo home_url() . $user_saved_post->article_url; ?>" target="_blank"><?php echo $user_saved_post->article_title; ?></a>
+												<a id="<?php echo $user_saved_post->article_id ?>" class="remove-post-button" data-userID="<?php print $current_user_id; ?>" href="javascript:;" title="Remove article"></a>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								<?php else : ?>
+									<h4 class="no-posts">You don't have any saved posts yet!</h4>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
-				<?php else : ?>
-					<p class="no-posts">You don't have any saved posts yet!</p>
-				<?php endif; ?>
 			</div>
 		</div>
 	</div>

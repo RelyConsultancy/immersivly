@@ -1333,6 +1333,9 @@ article { height: 100%; width: 100%; }
       text-decoration: underline;
     }
   }
+  .no-posts {
+    margin-top: rem-calc(80);
+  }
 }
 .remove-post-button {
   background: #444;

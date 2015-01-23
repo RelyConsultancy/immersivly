@@ -5542,6 +5542,9 @@ article {
 .dashboard-saved-posts .saved-article:hover {
   text-decoration: underline;
 }
+.dashboard-saved-posts .no-posts {
+  margin-top: 5rem;
+}
 
 .remove-post-button {
   background: #444;
