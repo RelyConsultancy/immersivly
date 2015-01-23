@@ -31,14 +31,16 @@ else {
 				<?php if ($user_saved_posts) : ?>
 					<div class="dashboard-saved-posts-list">
 						<h2>Below you have the list of saved articles</h2>
+						<ul>
 					<?php
 						foreach ($user_saved_posts as $key => $user_saved_post) {
-							print '<div class="saved-article-' . $user_saved_post->article_id. '">';
+							print '<li class="saved-article-' . $user_saved_post->article_id. '">';
 							print '<a href="' . home_url() . $user_saved_post->article_url . '" target="__blank">' . $user_saved_post->article_title . '</a> ';
 							print ' | <a id="' . $user_saved_post->article_id . '" class="remove-post-button" data-userID="' . $current_user_id. '" href="javascript:;">Remove post from list</a></br>';
-							print '</div>';
+							print '</li>';
 						}
 					?>
+						</ul>
 					</div>
 				<?php else : ?>
 					<p class="no-posts">You don't have any saved posts yet!</p>
