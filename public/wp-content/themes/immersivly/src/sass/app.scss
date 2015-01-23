@@ -91,14 +91,14 @@
   &__item {
 
     &--health a,
-    &--health span,
-    &--health label:before  { background-color: categories(health); }
+    &--health span { background-color: categories(health); }
+    &--health label:before { border-color: categories(health); }
     &--news a,
-    &--news span,
-    &--news label:before    { background-color: categories(news); }
+    &--news span { background-color: categories(news); }
+    &--news label:before { border-color: categories(news); }
     &--tech a,
-    &--tech span,
-    &--tech label:before    { background-color: categories(tech); }
+    &--tech span { background-color: categories(tech); }
+    &--tech label:before  { border-color: categories(tech); }
 
     &--active {
       label:before {
@@ -112,6 +112,7 @@
     margin: 0 !important;
     display: block;
     vertical-align: top !important;
+
     &:before {
       content: "";
       width: 20px;
@@ -119,7 +120,8 @@
       float: $default-float;
       margin-right: rem-calc(4);
       text-align: center;
-      color: #fff;
+      background: #fff;
+      border: 10px solid #444;
       line-height: rem-calc(20);
       @include opacity(.5);
       @include single-transition(opacity);
@@ -134,11 +136,14 @@
       padding: rem-calc(0 10);
       line-height: rem-calc(20);
     }
+    span {
+      float: left;
+    }
   }
   [type='checkbox'] {
     display: none;
     &:checked + label:before {
-      content: "\2715";
+      border-width: 6px;
       @include opacity(1);
     }
   }
