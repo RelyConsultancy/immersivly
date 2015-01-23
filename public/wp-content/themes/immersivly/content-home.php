@@ -7,6 +7,8 @@
 ?>
 
 <?php $category = get_the_category(); ?>
+<?php include_once(IMM_BASE_PATH . '/inc/helpers.php'); ?>
+<?php $shares = immersivly_get_the_number_of_shares($post->ID); ?>
 
 <div class="item transition small-12 medium-6 large-4 columns <?php echo $category[0]->category_nicename; ?>" data-value="<?php echo get_the_ID(); ?> ">
 	<article class="effect-milo" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -17,7 +19,7 @@
 			<li class="actions__item actions--more">
 				<ul class="no-bullet">
 					<li class="actions__item">
-				<span class="actions--shares"><i class="icon-heart"></i> 122</span>
+				<span class="actions--shares"><i class="icon-heart"></i><?php print $shares; ?></span>
 			</li>
 			<li class="actions__item">
 				<span class="actions--eta"><i class="icon-time"></i> <?php post_read_time(); ?></span>
