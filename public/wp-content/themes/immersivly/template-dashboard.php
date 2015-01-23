@@ -32,7 +32,7 @@ else {
 			<div class="dashboard-saved-posts">
 				<?php if ($user_saved_posts) : ?>
 					<div class="dashboard-saved-posts-list">
-						<h1>Welcome <?php print $current_user->display_name; ?></h1>
+						<h1>Welcome <?php print $current_user->first_name; ?>, <?php print $current_user->last_name; ?></h1>
 						<h2>Below you have the list of saved articles</h2>
 						<ul>
 							<?php
