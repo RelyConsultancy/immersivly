@@ -36,7 +36,7 @@ else {
 							<div class="row">
 								<div class="small-12 medium-10 medium-centered columns">
 									<section class="author-box--page">
-										<h1 class="author-box--page__title">Welcome <?php print $current_user->display_name; ?></h1>
+										<h1 class="author-box--page__title">Welcome <?php print $current_user->first_name; ?>, <?php print $current_user->last_name; ?></h1>
 									</section>
 								</div>
 							</div>
