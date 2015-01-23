@@ -32,18 +32,30 @@ else {
 			<div class="dashboard-saved-posts">
 				<?php if ($user_saved_posts) : ?>
 					<div class="dashboard-saved-posts-list">
-						<h1>Welcome <?php print $current_user->display_name; ?></h1>
-						<h2>Below you have the list of saved articles</h2>
-						<ul>
-							<?php
-								foreach ($user_saved_posts as $key => $user_saved_post) {
-									print '<li class="saved-article-' . $user_saved_post->article_id. '">';
-									print '<a href="' . home_url() . $user_saved_post->article_url . '" target="__blank">' . $user_saved_post->article_title . '</a> ';
-									print ' | <a id="' . $user_saved_post->article_id . '" class="remove-post-button" data-userID="' . $current_user_id. '" href="javascript:;">Remove post from list</a></br>';
-									print '</li>';
-								}
-							?>
-						</ul>
+						<section class="content--highlighted">
+							<div class="row">
+								<div class="small-12 medium-10 medium-centered columns">
+									<section class="author-box--page">
+										<h1 class="author-box--page__title">Welcome <?php print $current_user->display_name; ?></h1>
+									</section>
+								</div>
+							</div>
+						</section>
+
+						<div class="row">
+							<div class="small-12 medium-10 medium-centered columns">
+								<h4 class="content--block__subtitle">Saved articles</h4>
+
+								<ul>
+									<?php foreach ($user_saved_posts as $key => $user_saved_post): ?>
+										<li class="saved-article-<? echo $user_saved_post->article_id; ?>">
+											<a class="saved-article" href="<?php echo home_url() . $user_saved_post->article_url; ?>" target="_blank"><?php echo $user_saved_post->article_title; ?></a>
+											<a id="<?php echo $user_saved_post->article_id ?>" class="remove-post-button" data-userID="<?php $current_user_id ?>" href="javascript:;" title="Remove article"></a>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							</div>
+						</div>
 					</div>
 				<?php else : ?>
 					<p class="no-posts">You don't have any saved posts yet!</p>
