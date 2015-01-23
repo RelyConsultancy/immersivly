@@ -32,4 +32,19 @@ jQuery(document).ready(function($){
       }
     });
   });
+
+  // Handle the Update number of shares per post.
+  $(".sharrre").on('click', function() {
+    jQuery.ajax({
+      type:"POST",
+      url: "/wp-admin/admin-ajax.php",
+      data: {
+        action: 'immersivly_update_number_of_shares',
+        article_id: $(this).parents('ul').attr('id')
+      },
+      success:function(data){
+        $('.js-count').html(data);
+      }
+    });
+  });
 })

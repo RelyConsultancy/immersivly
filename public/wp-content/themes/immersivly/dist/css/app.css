@@ -4884,18 +4884,18 @@ figure {
 .actions--eta, .actions--comments {
   color: #fff;
 }
-.actions span {
+.actions span:not(.js-count) {
   font-weight: 300;
   font-size: 0.6875rem;
   line-height: 1.1875rem;
   padding: 0 0.625rem 0.0625rem;
   display: block;
 }
-.actions span.dsq-postid {
+.actions span:not(.js-count).dsq-postid {
   display: inline-block;
   padding: 0;
 }
-.actions span i {
+.actions span:not(.js-count) i {
   margin-right: 0.1875rem;
 }
 .actions .categories span {

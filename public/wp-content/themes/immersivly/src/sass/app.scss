@@ -669,7 +669,7 @@ figure { margin: 0; }
     color: #fff;
   }
 
-  span {
+  span:not(.js-count) {
     font-weight: 300;
     font-size: rem-calc(11);
     line-height: rem-calc(19);
