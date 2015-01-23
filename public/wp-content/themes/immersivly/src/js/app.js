@@ -179,9 +179,10 @@
 
 
       // Sticky
-      if ( !isMobile ) {
+      var mp = $('.videobg, .media_picture');
+      if ( !isMobile && mp.length > 0) {
         var sticky = new Waypoint.Sticky({
-          element: $('.videobg, .media_picture')[0]
+          element: mp[0]
         });
       }
 
@@ -230,6 +231,14 @@
 
         IMM.config.$triggerBtn.on('click', function( event ) {
           event.preventDefault();
+
+          $('.overlay__inner').hide();
+
+          switch($(this).attr('id')) {
+            case 'more-link': $('#nav').show(); break;
+            case 'login-link': $('#login').show(); break;
+          }
+
           self.toggleOverlay();
         });
         IMM.config.$closeBttn.on('click', function( event ) {

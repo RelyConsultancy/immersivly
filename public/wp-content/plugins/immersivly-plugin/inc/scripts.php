@@ -98,6 +98,21 @@ function immersivly_update_number_of_shares() {
 	die();
 }
 
+// Remove the opening [wpmem_txt] from login form
+function immersive_remove_open_wpmem_txt( $form ) {
+	$form = str_replace( '[wpmem_txt]', '', $form );
+	return $form;
+}
+add_filter( 'wpmem_login_form', 'immersive_remove_open_wpmem_txt' );
+
+// Remove the closing [/wpmem_txt] from login form
+function immersive_remove_close_wpmem_txt( $form ) {
+	$form = str_replace( '[/wpmem_txt]', '', $form );
+	return $form;
+}
+add_filter( 'wpmem_login_form', 'immersive_remove_close_wpmem_txt' );
+
+
 // Add the custom actions the the wp_ajax layer.
 add_action('wp_ajax_immersive_save_for_later', 'immersive_save_for_later');
 add_action('wp_ajax_nopriv_immersive_save_for_later', 'immersive_save_for_later');
