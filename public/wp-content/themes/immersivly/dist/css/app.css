@@ -4714,7 +4714,6 @@ figure {
 .searchform__field[type="text"] {
   padding: 0.3125rem 1.5625rem 0.3125rem 0.3125rem;
   height: 1.75rem;
-  font-style: italic;
 }
 .searchform__button {
   position: absolute;
