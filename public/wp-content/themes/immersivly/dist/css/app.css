@@ -5205,6 +5205,10 @@ section.stuck {
   font-weight: 300;
   font-size: 1.125rem;
 }
+.author-box--page .social {
+  text-align: left;
+  margin-top: 1.25rem;
+}
 
 .story {
   background-repeat: no-repeat;
