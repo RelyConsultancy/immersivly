@@ -4777,6 +4777,17 @@ figure {
   margin-top: 3.125rem;
 }
 
+.corporate--page {
+  margin-top: 0;
+}
+.corporate--page .content--highlighted {
+  margin-bottom: 4.375rem;
+}
+.corporate--page .alignleft {
+  float: left;
+  margin: 0 0.9375rem 0.625rem 0;
+}
+
 .trending-badge {
   font-size: 1.1875rem;
   height: 1.8125rem;
