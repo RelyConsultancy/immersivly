@@ -4330,20 +4330,29 @@ th.hide-for-touch {
   height: 20px;
   margin-bottom: 4px;
 }
-.categories__item--health a, .categories__item--health span, .categories__item--health label:before {
+.categories__item--health a, .categories__item--health span {
   background-color: #4d78bb;
 }
-.categories__item--news a, .categories__item--news span, .categories__item--news label:before {
+.categories__item--health label:before {
+  border-color: #4d78bb;
+}
+.categories__item--news a, .categories__item--news span {
   background-color: #7a2277;
 }
-.categories__item--tech a, .categories__item--tech span, .categories__item--tech label:before {
+.categories__item--news label:before {
+  border-color: #7a2277;
+}
+.categories__item--tech a, .categories__item--tech span {
   background-color: #e8378d;
 }
+.categories__item--tech label:before {
+  border-color: #e8378d;
+}
 .categories__item--active label:before {
-  content: "\2715";
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
+  border-width: 6px;
 }
 .categories__label {
   margin: 0 !important;
@@ -4357,7 +4366,8 @@ th.hide-for-touch {
   float: left;
   margin-right: 0.25rem;
   text-align: center;
-  color: #fff;
+  background: #fff;
+  border: 10px solid #444;
   line-height: 1.25rem;
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -4373,12 +4383,13 @@ th.hide-for-touch {
   display: inline-block;
   padding: 0 0.625rem;
   line-height: 1.25rem;
+  float: left;
 }
 .categories [type='checkbox'] {
   display: none;
 }
 .categories [type='checkbox']:checked + label:before {
-  content: "\2715";
+  border-width: 6px;
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
