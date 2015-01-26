@@ -4607,7 +4607,9 @@ figure {
   width: 100%;
 }
 .login-form .logo {
-  background: center top no-repeat url("../img/logo.png");
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center top;
   min-height: 66px;
   min-width: 66px;
   padding-top: 75px;
@@ -4616,6 +4618,12 @@ figure {
   color: #1d1d1b;
   font-weight: 300;
   display: inline-block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+  .login-form .logo {
+    background-image: url("../img/logo@2x.png");
+    background-size: 66px 66px;
+  }
 }
 .login-form h4 {
   font-size: 1rem;
@@ -4634,7 +4642,7 @@ figure {
   margin: -0.375rem 0 0;
 }
 .login-form .password-box {
-  padding-top: 1.25rem;
+  padding: 0.75rem 2.5rem;
   background: #f8f8f8;
   border-top: 0;
 }
@@ -4647,6 +4655,13 @@ figure {
   font-weight: 300;
   color: #000;
   margin-bottom: 1.25rem;
+}
+.login-form .forgot-box {
+  display: none;
+  margin: 1.25rem 0 1.875rem;
+}
+.login-form [type="checkbox"] {
+  margin-right: 0.3125rem;
 }
 .login-form .link-text {
   display: none;

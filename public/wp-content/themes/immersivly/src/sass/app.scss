@@ -372,7 +372,8 @@ figure { margin: 0; }
   width: 100%;
 
   .logo {
-    background: center top no-repeat url('../img/logo.png');
+    @include retina-bg('logo', 'png', 66px, 66px);
+    background-position: center top;
     min-height: 66px;
     min-width: 66px;
     padding-top: 75px;
@@ -401,7 +402,7 @@ figure { margin: 0; }
     }
   }
   .password-box {
-    padding-top: rem-calc(20);
+    padding: rem-calc(12 40);
     background: #f8f8f8;
     border-top: 0;
 
@@ -416,8 +417,15 @@ figure { margin: 0; }
     color: #000;
     margin-bottom: rem-calc(20);
   }
+  .forgot-box {
+    display: none;
+    margin: rem-calc(20 0 30);
+  }
   label {
     // display: none;
+  }
+  [type="checkbox"] {
+    margin-right: rem-calc(5);
   }
   .link-text {
     display: none;
