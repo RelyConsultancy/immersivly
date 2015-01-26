@@ -4632,7 +4632,7 @@ figure {
   margin: -0.375rem 0 0;
 }
 .login-form .password-box {
-  padding-top: 1.25rem;
+  padding: 0.75rem 2.5rem;
   background: #f8f8f8;
   border-top: 0;
 }
@@ -4645,6 +4645,13 @@ figure {
   font-weight: 300;
   color: #000;
   margin-bottom: 1.25rem;
+}
+.login-form .forgot-box {
+  display: none;
+  margin: 1.25rem 0 1.875rem;
+}
+.login-form [type="checkbox"] {
+  margin-right: 0.3125rem;
 }
 .login-form .link-text {
   display: none;

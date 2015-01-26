@@ -400,7 +400,7 @@ figure { margin: 0; }
     }
   }
   .password-box {
-    padding-top: rem-calc(20);
+    padding: rem-calc(12 40);
     background: #f8f8f8;
     border-top: 0;
 
@@ -415,8 +415,15 @@ figure { margin: 0; }
     color: #000;
     margin-bottom: rem-calc(20);
   }
+  .forgot-box {
+    display: none;
+    margin: rem-calc(20 0 30);
+  }
   label {
     // display: none;
+  }
+  [type="checkbox"] {
+    margin-right: rem-calc(5);
   }
   .link-text {
     display: none;

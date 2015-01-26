@@ -28,7 +28,9 @@
                 <div class="text-center">
                     <a href="#" class="forgot-pass">Forgot password?</a>
                 </div>
-                <?php echo do_shortcode( '[wp-members page="password"]' ); ?>
+                <div class="forgot-box">
+                    <?php echo do_shortcode( '[wp-members page="password"]' ); ?>
+                </div>
             </div>
             <div class="no-account">
                 Don't have an account yet? <a href="/register">Sign up</a>

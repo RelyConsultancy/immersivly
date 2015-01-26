@@ -222,6 +222,13 @@
         }
       }
 
+
+      // toggle forgot password
+
+      $('.forgot-pass').on('click', function() {
+        $('.forgot-box').slideToggle();
+      });
+
     },
 
     Overlay: {
