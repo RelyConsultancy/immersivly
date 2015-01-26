@@ -554,6 +554,17 @@ figure { margin: 0; }
     margin-top: rem-calc(50);
   }
 }
+.corporate--page {
+  margin-top: 0;
+
+  .content--highlighted {
+    margin-bottom: rem-calc(70);
+  }
+  .alignleft {
+    float: left;
+    margin: rem-calc(0 15 10 0);
+  }
+}
 
 .trending-badge {
   font-size: rem-calc(19);
