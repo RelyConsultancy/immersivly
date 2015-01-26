@@ -34,7 +34,7 @@ get_header(); ?>
 						</section>
 
 						<div class="row">
-							<div class="small-12 medium-10 medium-centered columns">
+							<div class="medium-6 medium-offset-1 columns">
 
 								<div class="entry__content">
 									<?php the_content(); ?>
@@ -49,6 +49,11 @@ get_header(); ?>
 								<footer class="entry__footer">
 									<?php edit_post_link( __( 'Edit', 'immersivly' ), '<span class="edit-link">', '</span>' ); ?>
 								</footer><!-- .entry-footer -->
+							</div>
+							<div class="medium-3 medium-pull-1 columns">
+								<div class="promo-column" style="background: gray; padding: 10px; color: #fff;">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eveniet quos nobis autem beatae fugit accusantium repellendus pariatur, sunt, reprehenderit eaque corrupti, perspiciatis impedit. Hic placeat magni recusandae, tempora eum?
+								</div>
 							</div>
 						</div>
 
