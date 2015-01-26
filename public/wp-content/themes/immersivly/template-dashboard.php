@@ -9,10 +9,9 @@
  * Template name: User Dashboard
  */
 
-// If the user is not logged in, redirect him to the login page.
+// If the user is not logged in, redirect him to the home page.
 if (!is_user_logged_in()) {
-	$location =  home_url() . '/login';
-	wp_redirect( $location, $status );
+	wp_redirect( home_url(), $status );
 }
 // If the user is logged in, get his ID.
 else {
