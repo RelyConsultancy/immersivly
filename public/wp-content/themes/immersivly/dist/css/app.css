@@ -4349,10 +4349,10 @@ th.hide-for-touch {
   border-color: #e8378d;
 }
 .categories__item--active label:before {
-  content: "\2715";
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
+  border-width: 6px;
 }
 .categories__label {
   margin: 0 !important;
@@ -4383,8 +4383,6 @@ th.hide-for-touch {
   display: inline-block;
   padding: 0 0.625rem;
   line-height: 1.25rem;
-}
-.categories__label span {
   float: left;
 }
 .categories [type='checkbox'] {

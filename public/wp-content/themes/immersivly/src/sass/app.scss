@@ -102,8 +102,8 @@
 
     &--active {
       label:before {
-        content: "\2715";
         @include opacity(1);
+        border-width: 6px;
       }
     }
   }
@@ -135,8 +135,6 @@
       display: inline-block;
       padding: rem-calc(0 10);
       line-height: rem-calc(20);
-    }
-    span {
       float: left;
     }
   }
