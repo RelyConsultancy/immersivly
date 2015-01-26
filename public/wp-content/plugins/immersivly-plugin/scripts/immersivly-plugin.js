@@ -28,7 +28,7 @@ jQuery(document).ready(function($){
         user_id: $(this).attr('data-userID')
       },
       success:function(data){
-        $("#" + data).parent().html('Message has been removed.');
+        $("#" + data).parent().html('Article has been removed.');
       }
     });
   });
