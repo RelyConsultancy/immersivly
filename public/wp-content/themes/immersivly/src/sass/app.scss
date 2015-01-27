@@ -246,7 +246,7 @@ figure { margin: 0; }
     }
     .sidebar__name {
       display: block;
-      font-size: rem-calc(18);
+      font-size: rem-calc(29);
       margin: rem-calc(28 0 0 -6);
 
       transform: rotate(-90deg);
@@ -1212,10 +1212,19 @@ section.stuck {
       margin: rem-calc(0 1);
 
       a {
-        width: rem-calc(18);
-        height: rem-calc(18);
-        line-height: rem-calc(18);
-        font-size: rem-calc(8);
+        width: rem-calc(29);
+        height: rem-calc(29);
+        line-height: rem-calc(29);
+        font-size: rem-calc(12);
+        &.social__item--twitter { font-size: rem-calc(11); }
+      }
+
+      // Where math fails over design
+      &--linkedin {
+        i { margin-left: rem-calc(1); }
+      }
+      &--facebook {
+        i { margin-right: rem-calc(2); }
       }
     }
   }
