@@ -16,6 +16,25 @@
 				</form>
 				<?php dynamic_sidebar( 'overlay' ); ?> -->
 
-		<?php echo do_shortcode( '[wp-members page="login"]' ); ?>
+        <div class="access-form login-form">
+            <div class="login-box">
+                <div class="text-center">
+                    <a href="/" class="logo">immersiv.ly</a>
+                </div>
+                <h4 class="text-center">Sign in to your account</h4>
+                <?php echo do_shortcode( '[wp-members page="login"]' ); ?>
+            </div>
+            <div class="password-box">
+                <div class="text-center">
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                </div>
+                <div class="forgot-box">
+                    <?php echo do_shortcode( '[wp-members page="password"]' ); ?>
+                </div>
+            </div>
+            <div class="no-account">
+                Don't have an account yet? <a href="/register">Sign up</a>
+            </div>
+        </div>
 	</div>
 </div>

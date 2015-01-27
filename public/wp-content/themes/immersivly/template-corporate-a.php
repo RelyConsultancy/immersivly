@@ -1,20 +1,17 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * Displays our Corporate Info.
  *
  * @package Immersivly
+ *
+ * Template name: Corporate A
  */
 
 get_header(); ?>
 
 <?php get_sidebar('home'); ?>
 
-<div class="content content--page corporate--page-default">
+<div class="content content--page">
 	<div class="row collapse">
 		<div class="small-12 columns">
 			<main id="main" class="site-main" role="main">

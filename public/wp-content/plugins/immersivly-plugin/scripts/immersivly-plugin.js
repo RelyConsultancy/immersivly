@@ -28,7 +28,22 @@ jQuery(document).ready(function($){
         user_id: $(this).attr('data-userID')
       },
       success:function(data){
-        $("#" + data).parent().html('Message has been removed.');
+        $("#" + data).parent().html('Article has been removed.');
+      }
+    });
+  });
+
+  // Handle the Update number of shares per post.
+  $(".sharrre").on('click', function() {
+    jQuery.ajax({
+      type:"POST",
+      url: "/wp-admin/admin-ajax.php",
+      data: {
+        action: 'immersivly_update_number_of_shares',
+        article_id: $(this).parents('ul').attr('id')
+      },
+      success:function(data){
+        $('.js-count').html(data);
       }
     });
   });

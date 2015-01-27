@@ -179,9 +179,10 @@
 
 
       // Sticky
-      if ( !isMobile ) {
+      var mp = $('.videobg, .media_picture');
+      if ( !isMobile && mp.length > 0) {
         var sticky = new Waypoint.Sticky({
-          element: $('.videobg, .media_picture')[0]
+          element: mp[0]
         });
       }
 
@@ -202,12 +203,13 @@
         $('.sidebar').toggleClass('sidebar--closed');
 
         setTimeout(function() {
-          Waypoint.refreshAll();
-          bxslider.reloadSlider();
+          if (mp.length > 0) {
+            Waypoint.refreshAll();
+          }
+          if ($section_container.length > 0) {
+            $section_container.isotope();
+          }
         }, 100);
-
-        // $section_container.isotope('reloadItems');
-        $section_container.isotope();
       });
 
       sidebarHandler();
@@ -220,6 +222,13 @@
           $('.sidebar').removeClass('sidebar--closed');
         }
       }
+
+
+      // toggle forgot password
+
+      $('.forgot-pass').on('click', function() {
+        $('.forgot-box').slideToggle();
+      });
 
     },
 

@@ -5,6 +5,14 @@
  * @package Immersivly
  */
 
+// Limit the search form only to posts.
+if(isset($_GET['search-type-limit'])) {
+	$type = $_GET['search-type-limit'];
+	$args = array( 'post_type' => $type );
+	$args = array_merge( $args, $wp_query->query );
+	query_posts( $args );
+}
+
 get_header(); ?>
 
 <?php get_sidebar('home'); ?>

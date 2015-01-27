@@ -30,7 +30,7 @@ get_header(); ?>
 						
 						<?php 
 							// Grab content here
-							get_template_part( 'content', 'home' ); 
+							get_template_part( 'content', 'home' );
 						?>
 
 					<?php $i++;
