@@ -14,3 +14,4 @@ register_activation_hook( __FILE__, 'immersive_install' );
 
 include('inc/install.php');
 include('inc/scripts.php');
+include('inc/updates.php');

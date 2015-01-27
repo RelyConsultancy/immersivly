@@ -70,6 +70,34 @@ function immersive_remove_saved_post() {
 	die();
 }
 
+/**
+ * Ajax callback used for updating the number of shares per post.
+ */
+function immersivly_update_number_of_shares() {
+	// Initialize the Word Press database wrapper.
+	global $wpdb;
+	// Get the custom table name.
+	$table_name = $wpdb->prefix . 'immersive_numbers_of_shares';
+
+	// Get the required data.
+	$article_id = $_POST['article_id'];
+	// Update the number of shares.
+	$wpdb->query("UPDATE {$table_name} SET number_of_shares = number_of_shares + 1 WHERE article_id = {$article_id}");
+	// Return the new number of shares, for updating the display.
+	$result = $wpdb->get_results( "SELECT number_of_shares, number_of_shares_fake FROM {$table_name} WHERE article_id = {$article_id} ", OBJECT );
+	$shares = array_pop($result);
+	$number_of_shares = $shares->number_of_shares;
+
+	if ($number_of_shares > 50) {
+		echo $number_of_shares;
+	}
+	else {
+		echo $shares->number_of_shares_fake;
+	}
+
+	die();
+}
+
 // Remove the opening [wpmem_txt] from login form
 function immersive_remove_open_wpmem_txt( $form ) {
 	$form = str_replace( '[wpmem_txt]', '', $form );
@@ -84,9 +112,13 @@ function immersive_remove_close_wpmem_txt( $form ) {
 }
 add_filter( 'wpmem_login_form', 'immersive_remove_close_wpmem_txt' );
 
+
 // Add the custom actions the the wp_ajax layer.
 add_action('wp_ajax_immersive_save_for_later', 'immersive_save_for_later');
 add_action('wp_ajax_nopriv_immersive_save_for_later', 'immersive_save_for_later');
 
 add_action('wp_ajax_immersive_remove_saved_post', 'immersive_remove_saved_post');
 add_action('wp_ajax_nopriv_immersive_remove_saved_post', 'immersive_remove_saved_post');
+
+add_action('wp_ajax_immersivly_update_number_of_shares', 'immersivly_update_number_of_shares');
+add_action('wp_ajax_nopriv_immersivly_update_number_of_shares', 'immersivly_update_number_of_shares');

@@ -26,7 +26,7 @@ get_header(); ?>
 
 					<div class="row">
 						<div class="small-12 medium-12 columns">
-							<h4 class="content--block__subtitle"><?php _e('Recent articles '); ?></h4>
+							<h4 class="content--block__subtitle"><?php _e('More articles by '); print get_the_author_meta('display_name'); ?></h4>
 						</div>
 					</div>
 

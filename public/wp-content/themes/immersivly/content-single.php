@@ -8,6 +8,7 @@
 <?php $user_ID = get_current_user_id(); ?>
 <?php $current_url = $_SERVER['REQUEST_URI']; ?>
 <?php include_once(IMM_BASE_PATH . '/inc/helpers.php'); ?>
+<?php $shares = immersivly_get_the_number_of_shares($post->ID); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="hero" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);">
@@ -18,9 +19,9 @@
 					<li class="categories actions__item">
 						<div class="categories__item--<?php echo $category[0]->category_nicename; ?>"><span><?php echo $category[0]->cat_name; ?></span></div>
 					</li>
-					<!-- <li class="actions__item">
-						<span class="actions--shares"><i class="icon-heart"></i> <span class="js-count">122</span></span>
-					</li> -->
+					<li class="actions__item">
+						<span class="actions--shares"><i class="icon-heart"></i> <span class="js-count"><?php print $shares; ?></span></span>
+					</li>
 					<li class="actions__item">
 						<span class="actions--eta"><i class="icon-time"></i> <?php post_read_time(); ?></span>
 					</li>
@@ -44,7 +45,7 @@
 					<?php immersivly_posted_on(); ?>
 				</div>
 
-				<ul class="social no-bullet">
+				<ul class="social no-bullet" id="<?php the_ID(); ?>">
 					<?php immersivly_social_media_buttons(); ?>
 				</ul>
 
