@@ -13,6 +13,23 @@
 	<h1 class="sidebar__name"><?php bloginfo( 'name' ); ?></h1>
 	<h5 class="sidebar__desc"><?php bloginfo( 'description' ); ?></h5>
 
+	<ul class="social no-bullet">
+		<li class="social__item">
+		  <a class="social__item--twitter twitter" rel="external" target="_blank" href="https://twitter.com/immersivly"><i class="icon-twitter"></i></a>
+		</li>
+		<li class="social__item">
+		  <a class="social__item--facebook facebook" rel="external" target="_blank" href="https://www.facebook.com/immersivlyltd?fref=ts"><i class="icon-facebook"></i></a>
+		</li>
+		<li class="social__item">
+		  <a class="social__item--gplus googlePlus" rel="external" target="_blank" href="https://plus.google.com/102804071028103801794/posts"><i class="icon-gplus"></i></a>
+		</li>
+		<li class="social__item">
+		  <a class="social__item--linkedin linkedin" rel="external" target="_blank" href="https://www.linkedin.com/company/immersivly-ltd"><i class="icon-linkedin"></i></a>
+		</li>
+<!-- 		<li class="social__item">
+			<a class="social__item--youtube" href="#"><i class="icon-youtube"></i></a>
+		</li> -->
+	</ul>
 
 	<ul id="filters" class="categories no-bullet">
 		<?php

@@ -24,11 +24,13 @@
                 <h4 class="text-center">Sign in to your account</h4>
                 <?php echo do_shortcode( '[wp-members page="login"]' ); ?>
             </div>
-            <div class="password-box" style="display: none;">
+            <div class="password-box">
                 <div class="text-center">
                     <a href="#" class="forgot-pass">Forgot password?</a>
                 </div>
-                <?php echo do_shortcode( '[wp-members page="password"]' ); ?>
+                <div class="forgot-box">
+                    <?php echo do_shortcode( '[wp-members page="password"]' ); ?>
+                </div>
             </div>
             <div class="no-account">
                 Don't have an account yet? <a href="/register">Sign up</a>

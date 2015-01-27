@@ -173,7 +173,7 @@ figure { margin: 0; }
 // - Sidebar
 .sidebar {
   background-color: #000;
-  padding: rem-calc(40);
+  padding: rem-calc(40 30);
   height: 100%;
   width: 200px;
   text-align: center;
@@ -246,7 +246,7 @@ figure { margin: 0; }
     }
     .sidebar__name {
       display: block;
-      font-size: rem-calc(18);
+      font-size: rem-calc(29);
       margin: rem-calc(28 0 0 -6);
 
       transform: rotate(-90deg);
@@ -372,7 +372,8 @@ figure { margin: 0; }
   width: 100%;
 
   .logo {
-    background: center top no-repeat url('../img/logo.png');
+    @include retina-bg('logo', 'png', 66px, 66px);
+    background-position: center top;
     min-height: 66px;
     min-width: 66px;
     padding-top: 75px;
@@ -401,7 +402,7 @@ figure { margin: 0; }
     }
   }
   .password-box {
-    padding-top: rem-calc(20);
+    padding: rem-calc(12 40);
     background: #f8f8f8;
     border-top: 0;
 
@@ -416,8 +417,15 @@ figure { margin: 0; }
     color: #000;
     margin-bottom: rem-calc(20);
   }
+  .forgot-box {
+    display: none;
+    margin: rem-calc(20 0 30);
+  }
   label {
     // display: none;
+  }
+  [type="checkbox"] {
+    margin-right: rem-calc(5);
   }
   .link-text {
     display: none;
@@ -1195,6 +1203,32 @@ section.stuck {
           color: $steel;
           border-color: $steel;
         }
+      }
+    }
+  }
+}
+.sidebar {
+  .social {
+    margin-bottom: rem-calc(35);
+    text-align: center;
+
+    &__item {
+      margin: rem-calc(0 1);
+
+      a {
+        width: rem-calc(29);
+        height: rem-calc(29);
+        line-height: rem-calc(29);
+        font-size: rem-calc(12);
+        &.social__item--twitter { font-size: rem-calc(11); }
+      }
+
+      // Where math fails over design
+      &--linkedin {
+        i { margin-left: rem-calc(1); }
+      }
+      &--facebook {
+        i { margin-right: rem-calc(2); }
       }
     }
   }
