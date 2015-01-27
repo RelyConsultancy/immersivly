@@ -259,6 +259,14 @@
           $('#login').show();
           self.toggleOverlay();
         }
+
+        if( $('.forgot-box .wpmem_msg').length > 0 ) {
+          $('.overlay__inner').hide();
+          $('.forgot-box').show();
+          $('#login').show();
+          $('.overlay__inner').scrollTop(3000);
+          self.toggleOverlay();
+        }
       },
 
       // triggerBttn.addEventListener( 'click', toggleOverlay );
