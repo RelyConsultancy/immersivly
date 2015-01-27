@@ -4669,6 +4669,15 @@ figure {
   font-weight: 500;
 }
 
+#wpmem_msg a,
+.wpmem_msg a {
+  display: none;
+}
+#wpmem_msg + #wpmem_login input,
+.wpmem_msg + #wpmem_login input {
+  border-color: #EB2097;
+}
+
 .footer {
   padding: 2.1875rem 0;
 }

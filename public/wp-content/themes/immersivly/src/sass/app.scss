@@ -442,6 +442,15 @@ figure { margin: 0; }
     }
   }
 }
+#wpmem_msg,
+.wpmem_msg {
+  a {
+    display: none;
+  }
+  & + #wpmem_login input {
+    border-color: #EB2097;
+  }
+}
 
 
 // - Footer
