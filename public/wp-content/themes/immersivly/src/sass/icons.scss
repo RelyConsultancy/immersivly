@@ -26,56 +26,77 @@
 .icon-bookmark:before {
 	content: "\e60c";
 }
+
 .icon-star:before {
 	content: "\e60d";
 }
+
 .icon-search:before {
 	content: "\e60b";
 }
+
 .icon-close:before {
 	content: "\e60a";
 }
+
 .icon-arr-next:before {
 	content: "\e608";
 }
+
 .icon-arr-prev:before {
 	content: "\e609";
 }
+
 .icon-email:before {
 	content: "\e607";
 }
+
 .icon-facebook:before {
-	content: "\e603";
-}
-.icon-gplus:before {
 	content: "\e604";
 }
-.icon-linkedin:before {
+
+.icon-gplus:before {
 	content: "\e605";
 }
-.icon-twitter:before {
+
+.icon-linkedin:before {
 	content: "\e606";
 }
-.icon-comment:before {
-	content: "\e600";
-}
-.icon-heart:before {
-	content: "\e601";
-}
-.icon-time:before {
-	content: "\e602";
-}
-.icon-menu:before {
+
+.icon-twitter:before {
 	content: "\e60e";
 }
-.icon-arrow-left:before {
+
+.icon-comment:before {
 	content: "\e60f";
 }
-.icon-arrow-right:before {
+
+.icon-heart:before {
 	content: "\e610";
 }
-.icon-trending:before {
+
+.icon-time:before {
 	content: "\e611";
+}
+
+.icon-menu:before {
+	content: "\e600";
+}
+
+.icon-arrow-left:before {
+	content: "\e601";
+}
+
+.icon-arrow-right:before {
+	content: "\e602";
+}
+
+.icon-trending:before {
+	content: "\e603";
+}
+
+.icon-youtube:before {
+	content: "\e612";
 }
 
 // Used to attach font icons on forms

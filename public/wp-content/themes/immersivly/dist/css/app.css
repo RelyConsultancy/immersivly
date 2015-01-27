@@ -48,47 +48,51 @@
 }
 
 .icon-facebook:before {
-  content: "\e603";
-}
-
-.icon-gplus:before {
   content: "\e604";
 }
 
-.icon-linkedin:before {
+.icon-gplus:before {
   content: "\e605";
 }
 
-.icon-twitter:before {
+.icon-linkedin:before {
   content: "\e606";
 }
 
-.icon-comment:before {
-  content: "\e600";
-}
-
-.icon-heart:before {
-  content: "\e601";
-}
-
-.icon-time:before {
-  content: "\e602";
-}
-
-.icon-menu:before {
+.icon-twitter:before {
   content: "\e60e";
 }
 
-.icon-arrow-left:before {
+.icon-comment:before {
   content: "\e60f";
 }
 
-.icon-arrow-right:before {
+.icon-heart:before {
   content: "\e610";
 }
 
-.icon-trending:before {
+.icon-time:before {
   content: "\e611";
+}
+
+.icon-menu:before {
+  content: "\e600";
+}
+
+.icon-arrow-left:before {
+  content: "\e601";
+}
+
+.icon-arrow-right:before {
+  content: "\e602";
+}
+
+.icon-trending:before {
+  content: "\e603";
+}
+
+.icon-youtube:before {
+  content: "\e612";
 }
 
 [data-icon] {
@@ -5419,6 +5423,20 @@ section.stuck {
 .social--dark .social__item a:hover {
   color: #666666;
   border-color: #666666;
+}
+
+.sidebar .social {
+  margin-bottom: 2.1875rem;
+  text-align: center;
+}
+.sidebar .social__item {
+  margin: 0 0.0625rem;
+}
+.sidebar .social__item a {
+  width: 1.125rem;
+  height: 1.125rem;
+  line-height: 1.125rem;
+  font-size: 0.5rem;
 }
 
 .article-info {
