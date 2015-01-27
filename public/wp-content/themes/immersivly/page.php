@@ -14,7 +14,7 @@ get_header(); ?>
 
 <?php get_sidebar('home'); ?>
 
-<div class="content content--page">
+<div class="content content--page corporate--page-default">
 	<div class="row collapse">
 		<div class="small-12 columns">
 			<main id="main" class="site-main" role="main">

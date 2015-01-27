@@ -246,8 +246,8 @@ figure { margin: 0; }
     }
     .sidebar__name {
       display: block;
-      font-size: rem-calc(29);
-      margin: rem-calc(28 0 0 -6);
+      font-size: rem-calc(24);
+      margin: rem-calc(60 0 0 -6);
 
       transform: rotate(-90deg);
       -webkit-transform: rotate(-90deg);
@@ -934,6 +934,10 @@ section.stuck {
       margin: rem-calc(30 0 50);
     }
   }
+}
+
+.corporate--page-default .promo-column {
+  margin-top: rem-calc(30);
 }
 
 
