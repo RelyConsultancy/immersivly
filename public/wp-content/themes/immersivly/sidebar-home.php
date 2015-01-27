@@ -13,6 +13,23 @@
 	<h1 class="sidebar__name"><?php bloginfo( 'name' ); ?></h1>
 	<h5 class="sidebar__desc"><?php bloginfo( 'description' ); ?></h5>
 
+	<ul class="social no-bullet">
+		<li class="social__item">
+		  <a class="social__item--twitter twitter" href="#"><i class="icon-twitter"></i></a>
+		</li>
+		<li class="social__item">
+		  <a class="social__item--facebook facebook" href="#"><i class="icon-facebook"></i></a>
+		</li>
+		<li class="social__item">
+		  <a class="social__item--gplus googlePlus" href="#"><i class="icon-gplus"></i></a>
+		</li>
+		<li class="social__item">
+		  <a class="social__item--linkedin linkedin" href="#"><i class="icon-linkedin"></i></a>
+		</li>
+		<li class="social__item">
+			<a class="social__item--youtube" href="#"><i class="icon-youtube"></i></a>
+		</li>
+	</ul>
 
 	<ul id="filters" class="categories no-bullet">
 		<?php

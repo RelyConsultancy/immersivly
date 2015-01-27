@@ -1203,6 +1203,23 @@ section.stuck {
     }
   }
 }
+.sidebar {
+  .social {
+    margin-bottom: rem-calc(35);
+    text-align: center;
+
+    &__item {
+      margin: rem-calc(0 1);
+
+      a {
+        width: rem-calc(18);
+        height: rem-calc(18);
+        line-height: rem-calc(18);
+        font-size: rem-calc(8);
+      }
+    }
+  }
+}
 
 // Article info
 .article-info {
