@@ -202,13 +202,13 @@
       $('.sidebar__switch').on('click', function() {
         $('.sidebar').toggleClass('sidebar--closed');
 
-        setTimeout(function() {
-          Waypoint.refreshAll();
+          setTimeout(function() {
+            Waypoint.refreshAll();
           bxslider.reloadSlider();
-        }, 100);
+          }, 100);
 
-        // $section_container.isotope('reloadItems');
-        $section_container.isotope();
+          // $section_container.isotope('reloadItems');
+          $section_container.isotope();
       });
 
       sidebarHandler();
@@ -252,6 +252,13 @@
           event.preventDefault();
           self.toggleOverlay();
         });
+
+        // show the login modal if there are error messages
+        if( $('#wpmem_msg').length > 0 ) {
+          $('.overlay__inner').hide();
+          $('#login').show();
+          self.toggleOverlay();
+        }
       },
 
       // triggerBttn.addEventListener( 'click', toggleOverlay );
