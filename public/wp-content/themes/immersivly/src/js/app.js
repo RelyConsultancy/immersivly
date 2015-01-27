@@ -202,13 +202,15 @@
       $('.sidebar__switch').on('click', function() {
         $('.sidebar').toggleClass('sidebar--closed');
 
+        if ( $('body').hasClass('page-template-template-home') ) {
         setTimeout(function() {
           Waypoint.refreshAll();
-          bxslider.reloadSlider();
+            // bxslider.reloadSlider();
         }, 100);
 
         // $section_container.isotope('reloadItems');
         $section_container.isotope();
+        }
       });
 
       sidebarHandler();
