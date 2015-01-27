@@ -10,10 +10,12 @@
 
 
 	<div class="row">
-		<div class="medium-6 medium-offset-1 columns">
+		<div class="medium-10 columns medium-centered">
 			<header class="entry__header">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			</header>
+		</div>
+		<div class="medium-6 medium-offset-1 columns">
 
 			<div class="entry__content">
 				<div class="entry__excerpt"><?php the_excerpt(); ?></div>
@@ -31,8 +33,8 @@
 			</footer><!-- .entry-footer -->
 		</div>
 		<div class="medium-3 medium-pull-1 columns">
-			<div class="promo-column" style="background: gray; padding: 10px; color: #fff;">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eveniet quos nobis autem beatae fugit accusantium repellendus pariatur, sunt, reprehenderit eaque corrupti, perspiciatis impedit. Hic placeat magni recusandae, tempora eum?
+			<div class="promo-column">
+				<p style="background: gray; padding: 10px; color: #fff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eveniet quos nobis autem beatae fugit accusantium repellendus pariatur, sunt, reprehenderit eaque corrupti, perspiciatis impedit. Hic placeat magni recusandae, tempora eum?</p>
 			</div>
 		</div>
 	</div>

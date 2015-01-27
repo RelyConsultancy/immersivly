@@ -5131,6 +5131,10 @@ section.stuck {
   margin: 1.875rem 0 3.125rem;
 }
 
+.corporate--page-default .promo-column {
+  margin-top: 1.875rem;
+}
+
 .entry-content p {
   font-family: "PT Serif", serif;
 }
