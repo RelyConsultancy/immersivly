@@ -202,15 +202,14 @@
       $('.sidebar__switch').on('click', function() {
         $('.sidebar').toggleClass('sidebar--closed');
 
-        if ( $('body').hasClass('page-template-template-home') ) {
         setTimeout(function() {
-          Waypoint.refreshAll();
-            // bxslider.reloadSlider();
+          if (mp.length > 0) {
+            Waypoint.refreshAll();
+          }
+          if ($section_container.length > 0) {
+            $section_container.isotope();
+          }
         }, 100);
-
-        // $section_container.isotope('reloadItems');
-        $section_container.isotope();
-        }
       });
 
       sidebarHandler();
