@@ -15,20 +15,20 @@
 
 	<ul class="social no-bullet">
 		<li class="social__item">
-		  <a class="social__item--twitter twitter" href="#"><i class="icon-twitter"></i></a>
+		  <a class="social__item--twitter twitter" rel="external" target="_blank" href="https://twitter.com/immersivly"><i class="icon-twitter"></i></a>
 		</li>
 		<li class="social__item">
-		  <a class="social__item--facebook facebook" href="#"><i class="icon-facebook"></i></a>
+		  <a class="social__item--facebook facebook" rel="external" target="_blank" href="https://www.facebook.com/immersivlyltd?fref=ts"><i class="icon-facebook"></i></a>
 		</li>
 		<li class="social__item">
-		  <a class="social__item--gplus googlePlus" href="#"><i class="icon-gplus"></i></a>
+		  <a class="social__item--gplus googlePlus" rel="external" target="_blank" href="https://plus.google.com/102804071028103801794/posts"><i class="icon-gplus"></i></a>
 		</li>
 		<li class="social__item">
-		  <a class="social__item--linkedin linkedin" href="#"><i class="icon-linkedin"></i></a>
+		  <a class="social__item--linkedin linkedin" rel="external" target="_blank" href="https://www.linkedin.com/company/immersivly-ltd"><i class="icon-linkedin"></i></a>
 		</li>
-		<li class="social__item">
+<!-- 		<li class="social__item">
 			<a class="social__item--youtube" href="#"><i class="icon-youtube"></i></a>
-		</li>
+		</li> -->
 	</ul>
 
 	<ul id="filters" class="categories no-bullet">
