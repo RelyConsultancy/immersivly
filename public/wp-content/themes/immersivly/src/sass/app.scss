@@ -449,6 +449,8 @@ figure { margin: 0; }
     }
   }
 }
+
+// style error messages
 #wpmem_msg,
 .wpmem_msg {
   a {
@@ -456,6 +458,20 @@ figure { margin: 0; }
   }
   & + #wpmem_login input {
     border-color: #EB2097;
+  }
+}
+
+// hide user fields
+.forgot-box {
+  label[for="user"],
+  #user {
+    display: none;
+  }
+}
+#wpmem_reg {
+  label[for="username"],
+  #log {
+    display: none;
   }
 }
 

@@ -4684,6 +4684,16 @@ figure {
   border-color: #EB2097;
 }
 
+.forgot-box label[for="user"],
+.forgot-box #user {
+  display: none;
+}
+
+#wpmem_reg label[for="username"],
+#wpmem_reg #log {
+  display: none;
+}
+
 .footer {
   padding: 2.1875rem 0;
 }
