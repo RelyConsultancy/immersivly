@@ -31,10 +31,10 @@
 				</ul>
 
 
-				<?php if ( get_field('article_short_title') ) : ?>
-					<h1 class="hero__title"><?php the_field('article_short_title'); ?></h1>
-				<?php else : ?>
+				<?php if ( get_the_title() ) : ?>
 					<?php the_title( '<h1 class="hero__title">', '</h1>' ); ?>
+				<?php else : ?>
+					<h1 class="hero__title"><?php the_field('article_short_title'); ?></h1>
 				<?php endif; ?>
 
 				<div class="hero__blurb">
