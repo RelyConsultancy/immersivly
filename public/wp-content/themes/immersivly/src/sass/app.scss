@@ -464,6 +464,19 @@ figure { margin: 0; }
   }
 }
 
+.register-form {
+  .wpmem_msg {
+    text-align: left;
+
+    & + #wpmem_login input {
+      border-color: #999;
+    }
+  }
+  .link-text {
+    text-align: left;
+  }
+}
+
 // hide user fields
 .forgot-box {
   label[for="user"],
