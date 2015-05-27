@@ -90,6 +90,9 @@
   // TODO: Refactor
   &__item {
 
+    &--arts a,
+    &--arts span { background-color: categories(arts); }
+    &--arts label:before { border-color: categories(arts); }
     &--health a,
     &--health span { background-color: categories(health); }
     &--health label:before { border-color: categories(health); }
@@ -1037,6 +1040,7 @@ section.stuck {
   &__item {
     float: $default-float;
     margin-right: rem-calc(3);
+    margin-bottom: rem-calc(3);
     a {
       background-color: #959595;
       font-size: rem-calc(15);
@@ -1465,7 +1469,6 @@ article { height: 100%; width: 100%; }
 @media #{$small-only} {
   .subscribe-bar {
     &__button {
-      margin: rem-calc(5 0 0);
       width: 100%;
     }
   }
