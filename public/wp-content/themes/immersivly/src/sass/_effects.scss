@@ -167,7 +167,7 @@
   // Hover colours - TODO: refactor to remove !important (?)
   article:before {
     .arts & {
-      background: rgba(categories(arts), .5);
+      background: rgba(categories(arts), .35) !important;
     }
     .news & {
       background: rgba(categories(news), .5) !important;
@@ -206,7 +206,7 @@
   // Hover colours
   article:hover:before {
     .arts & {
-      background: rgba(categories(arts), .5);
+      background: rgba(categories(arts), .53);
     }
     .news & {
       background: rgba(categories(news), .5);
