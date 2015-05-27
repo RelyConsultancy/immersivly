@@ -90,6 +90,8 @@
   // TODO: Refactor
   &__item {
 
+    &--arts a,
+    &--arts span { background-color: categories(arts); }
     &--health a,
     &--health span { background-color: categories(health); }
     &--health label:before { border-color: categories(health); }
