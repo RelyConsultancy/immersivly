@@ -47,4 +47,12 @@ jQuery(document).ready(function($){
       }
     });
   });
+
+  $(".forgot-box #email").on('keyup', function() {
+    $(".forgot-box #user").val($(".forgot-box #email").val());
+  });
+
+  $("#wpmem_reg #user_email").on('keyup', function() {
+    $("#wpmem_reg #log").val($("#wpmem_reg #user_email").val());
+  });
 })

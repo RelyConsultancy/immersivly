@@ -405,9 +405,9 @@ figure { margin: 0; }
     }
   }
   .password-box {
-    padding: rem-calc(12 40);
     background: #f8f8f8;
     border-top: 0;
+    padding: 0;
 
     .buttons {
       background: #dcdcdc;
@@ -418,11 +418,18 @@ figure { margin: 0; }
     font-size: rem-calc(13);
     font-weight: 300;
     color: #000;
-    margin-bottom: rem-calc(20);
+    display: block;
+    padding: rem-calc(12 0);
+
+    &:hover {
+      background: rgba(0,0,0,0.05);
+      transition: 0.2s;
+    }
   }
   .forgot-box {
     display: none;
     margin: rem-calc(20 0 30);
+    padding: rem-calc(0 40);
   }
   label {
     // display: none;
@@ -446,6 +453,31 @@ figure { margin: 0; }
       color: inherit;
       font-weight: 500;
     }
+  }
+}
+
+// style error messages
+#wpmem_msg,
+.wpmem_msg {
+  a {
+    display: none;
+  }
+  & + #wpmem_login input {
+    border-color: #EB2097;
+  }
+}
+
+// hide user fields
+.forgot-box {
+  label[for="user"],
+  #user {
+    display: none;
+  }
+}
+#wpmem_reg {
+  label[for="username"],
+  #log {
+    display: none;
   }
 }
 
