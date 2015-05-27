@@ -14,7 +14,7 @@
 	<header class="hero" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>);">
 
 		<div class="row">
-			<div class="small-12 medium-8 large-4 medium-push-1 columns">
+			<div class="small-12 medium-8 large-6 medium-push-1 columns">
 				<ul class="actions no-bullet">
 					<li class="categories actions__item">
 						<div class="categories__item--<?php echo $category[0]->category_nicename; ?>"><span><?php echo $category[0]->cat_name; ?></span></div>
