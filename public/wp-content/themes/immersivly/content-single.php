@@ -123,7 +123,7 @@
 				</section>
 			<?php else : ?>
 				<section class="media media_picture">
-					<pre><?php //print_r($file) ?></pre>
+					<pre><?php print_r($file) ?></pre>
 					<!-- <img src="<?php echo $file['url']; ?>" alt=""> -->
 
 					<picture>
