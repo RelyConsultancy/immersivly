@@ -245,6 +245,7 @@
           switch($(this).attr('id')) {
             case 'more-link': $('#nav').show(); break;
             case 'login-link': $('#login').show(); break;
+            case 'subscribe-link': $('#subscribe').show(); break;
           }
 
           self.toggleOverlay();
@@ -287,6 +288,7 @@
 
         if ( IMM.config.$overlay.hasClass('overlay--open') ) {
           IMM.config.$overlay.removeClass('overlay--open').addClass('overlay--close');
+          $('body').removeClass('has-overlay');
 
           // var onEndTransitionFn = function( event ) {
           //   if ( support.transitions ) {
@@ -305,6 +307,7 @@
           // }
         } else {
           IMM.config.$overlay.removeClass('overlay--close').addClass('overlay--open');
+          $('body').addClass('has-overlay');
         }
       }
     }

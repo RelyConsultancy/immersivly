@@ -43,5 +43,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<?php get_template_part( 'partial-newsletter');?>
+<?php // get_template_part( 'partial-newsletter');?>
 <?php get_footer(); ?>

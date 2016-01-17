@@ -19,6 +19,7 @@
 					<li class="categories actions__item">
 						<div class="categories__item--<?php echo $category[0]->category_nicename; ?>"><span><?php echo $category[0]->cat_name; ?></span></div>
 					</li>
+					<?php if(0): ?>
 					<li class="actions__item">
 						<span class="actions--shares"><i class="icon-heart"></i> <span class="js-count"><?php print $shares; ?></span></span>
 					</li>
@@ -28,6 +29,7 @@
 					<li class="actions__item">
 						<span class="actions--comments"><i class="icon-comment"></i> <?php comments_number( 0, 1, '%' ); ?></span>
 					</li>
+					<?php endif; ?>
 				</ul>
 
 
@@ -51,6 +53,7 @@
 
 				<ul class="article-info no-bullet">
 					<li><i class="icon-time"></i><?php post_read_time(); ?> reading time</li>
+					<?php if(0) : ?>
 					<?php if (is_user_logged_in() && immersivly_check_if_post_is_not_saved($user_ID, $post->ID)) : ?>
 						<li>
 							Post already saved.
@@ -61,6 +64,7 @@
 								<span class="article-info__save"><i class="icon-star"></i></span>Save for later
 							</a>
 						</li>
+					<?php endif; ?>
 					<?php endif; ?>
 				</ul>
 			</div>

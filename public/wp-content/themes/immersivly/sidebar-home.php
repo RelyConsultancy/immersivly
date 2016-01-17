@@ -21,7 +21,7 @@
 		  <a class="social__item--facebook facebook" rel="external" target="_blank" href="https://www.facebook.com/immersivlyltd?fref=ts"><i class="icon-facebook"></i></a>
 		</li>
 		<li class="social__item">
-		  <a class="social__item--gplus googlePlus" rel="external" target="_blank" href="https://plus.google.com/102804071028103801794/posts"><i class="icon-gplus"></i></a>
+		  <a class="social__item--gplus googlePlus" rel="external" target="_blank" href="https://plus.google.com/102804071028103801794/posts"><i class="icon-gplus-new"></i></a>
 		</li>
 		<li class="social__item">
 		  <a class="social__item--linkedin linkedin" rel="external" target="_blank" href="https://www.linkedin.com/company/immersivly-ltd"><i class="icon-linkedin"></i></a>
@@ -61,13 +61,16 @@
 
 	<ul class="user-actions no-bullet">
 		<!-- <li><a class="js-go-top" href="#">Go Top</a></li> -->
-		<li><a id="more-link" class="user-actions__link js-trigger-overlay" href="#"><?php _e('More Info'); ?></a></li>
+		<li><a id="more-link" class="user-actions__link js-trigger-overlay" href="#" title="Menu"><?php _e('More Info'); ?></a></li>
+		<li><a id="subscribe-link" class="user-actions__link js-trigger-overlay" href="#" title="Subscribe"><?php _e('Subscribe'); ?></a></li>
+		<?php if (0) : ?>
 		<?php if ( is_user_logged_in() ) : ?>
 			<li><a class="user-actions__link" href="<?php echo esc_url( home_url( '/user-dashboard' ) ); ?>"><?php _e('Dashboard'); ?></a></li>
 			<li><a class="user-actions__link" href="<?php echo wp_logout_url( home_url() ); ?>" title="Logout"><?php _e('Logout'); ?></a></li>
 		<?php else : ?>
 			<li><a id="login-link" class="user-actions__link js-trigger-overlay" href="#"><?php _e('Login'); ?></a></li>
 			<li><a class="user-actions__link" href="<?php echo esc_url( home_url( '/register' ) ); ?>" title="Register"><?php _e('Register'); ?></a></li>
+		<?php endif; ?>
 		<?php endif; ?>
 	</ul>
 </aside>

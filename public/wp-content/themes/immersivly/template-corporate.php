@@ -51,9 +51,9 @@ get_header(); ?>
 								</footer><!-- .entry-footer -->
 							</div>
 							<div class="medium-3 medium-pull-1 columns">
-								<div class="promo-column" style="background: gray; padding: 10px; color: #fff;">
+								<!-- <div class="promo-column" style="background: gray; padding: 10px; color: #fff;">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eveniet quos nobis autem beatae fugit accusantium repellendus pariatur, sunt, reprehenderit eaque corrupti, perspiciatis impedit. Hic placeat magni recusandae, tempora eum?
-								</div>
+								</div> -->
 							</div>
 						</div>
 
@@ -64,6 +64,6 @@ get_header(); ?>
 			</main>
 		</div>
 	</div>
-	<?php get_template_part( 'partial-newsletter');?>
+	<?php // get_template_part( 'partial-newsletter');?>
 	<?php get_footer(); ?>
 </div>

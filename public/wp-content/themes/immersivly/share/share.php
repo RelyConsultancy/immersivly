@@ -18,7 +18,6 @@
 <script>
   jQuery(document).ready(function( $ ) {
     $('.twitter-<?php the_ID(); ?>').each(function() {
-      var self = this;
       $(this).sharrre({
         share: {
           twitter: true
@@ -34,7 +33,6 @@
     });
 
     $('.facebook-<?php the_ID(); ?>').each(function() {
-      var self = this;
       $(this).sharrre({
         share: {
           facebook: true
@@ -49,14 +47,13 @@
     });
 
     $('.googleplus-<?php the_ID(); ?>').each(function() {
-      var self = this;
       $(this).sharrre({
         share: {
           googlePlus: true
         },
         urlCurl: '/wp-content/themes/immersivly/share/sharrre.php',
         enableHover: false,
-        template: '<span class="social__item__count">{total}</span><i class="icon-gplus"></i>',
+        template: '<span class="social__item__count">{total}</span><i class="icon-gplus-new"></i>',
         click: function(api, options) {
           api.simulateClick();
           api.openPopup('googlePlus');
@@ -65,7 +62,6 @@
     });
 
     $('.linkedin-<?php the_ID(); ?>').each(function() {
-      var self = this;
       $(this).sharrre({
         share: {
           linkedin: true

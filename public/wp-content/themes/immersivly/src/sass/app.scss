@@ -50,7 +50,11 @@
 @import "patches";
 @import "effects";
 
-
+body {
+  &.has-overlay {
+    overflow: hidden;
+  }
+}
 
 .home {
   background-color: #000;
@@ -102,6 +106,13 @@
     &--tech a,
     &--tech span { background-color: categories(tech); }
     &--tech label:before  { border-color: categories(tech); }
+    &--travel a,
+    &--travel span { background-color: categories(travel); }
+    &--travel label:before  { border-color: categories(travel); }
+    &--immersiv-ly a,
+    &--immersiv-ly span { background-color: categories(immersivly); }
+    &--immersiv-ly label:before  { border-color: categories(immersivly); }
+
 
     &--active {
       label:before {
@@ -194,6 +205,7 @@ figure { margin: 0; }
     display: block;
     color: #808080;
     margin-bottom: rem-calc(18);
+    font-size: rem-calc(22);
     cursor: pointer;
     position: absolute;
     top: 14px;
@@ -1237,7 +1249,7 @@ section.stuck {
     &__count { display: none; }
 
     &--facebook { font-size: rem-calc(20); }
-    &--gplus    { font-size: rem-calc(18); }
+    &--gplus    { font-size: rem-calc(22); }
     &--linkedin { font-size: rem-calc(17); }
     &--email    { font-size: rem-calc(13); }
   }
@@ -1270,6 +1282,7 @@ section.stuck {
         line-height: rem-calc(29);
         font-size: rem-calc(12);
         &.social__item--twitter { font-size: rem-calc(11); }
+        &.social__item--gplus   { font-size: rem-calc(14); }
       }
 
       // Where math fails over design
@@ -1533,4 +1546,39 @@ article { height: 100%; width: 100%; }
 
 @media #{$xxlarge-up} { }
 @media #{$xxlarge-only} {}
+
+
+#subscribe {
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h3 { margin-bottom: 20px; }
+  .button { 
+    width: 100%; 
+    white-space: normal;
+    margin-bottom: 0;
+  }
+
+  .input-group {
+    input {
+      float: left;
+      margin-top: 5px;
+      font-size: 20px;
+    }
+    label {
+      display: block;
+      margin-left: 20px;
+    }
+  }
+
+  .indicates-required {
+    font-size: rem-calc(13);
+    color: #aaa;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ccc;
+  }
+}
 

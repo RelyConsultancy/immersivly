@@ -39,6 +39,10 @@
 	<div id="login" class="overlay__inner">
 		<?php get_template_part('partial-login'); ?>
 	</div>
+
+	<div id="subscribe" class="overlay__inner">
+		<?php get_template_part('partial-subscribe'); ?>
+	</div>
 </div>
 
 </body>

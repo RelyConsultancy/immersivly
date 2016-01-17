@@ -16,6 +16,7 @@
 			<li class="categories actions__item">
 				<div class="categories__item--<?php echo $category[0]->category_nicename; ?>"><span><?php echo $category[0]->cat_name; ?></span></div>
 			</li>
+			<?php /*
 			<li class="actions__item actions--more">
 				<ul class="no-bullet">
 					<li class="actions__item">
@@ -29,6 +30,7 @@
 			</li>
 				</ul>
 			</li>
+			*/ ?>
 		</ul>
 
 		<?php the_post_thumbnail(); ?>
@@ -37,7 +39,7 @@
 		</header> -->
 		<div class="title">
 			<?php if ( get_field('featured') ) : ?>
-				<p class="trending-badge icon-trending"><?php _e('Trending'); ?></p>
+				<?php /*<p class="trending-badge icon-trending"><?php _e('Trending'); ?></p> */ ?>
 			<?php endif; ?>
 			<?php if ( get_field('article_short_title') ) : ?>
 				<h2 class="title__entry"><?php the_field('article_short_title'); ?></h2>

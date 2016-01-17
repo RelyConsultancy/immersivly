@@ -13,16 +13,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', '');
+define('DB_NAME', 'immersivly');
 
 /** MySQL database username */
-define('DB_USER', '');
+define('DB_USER', 'immersivly');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'rFQX30ndGhn0');
 
 /** MySQL hostname */
-define('DB_HOST', '');
+define('DB_HOST', '213.171.200.82');
 
 /**
  * For developers: WordPress debugging mode.
