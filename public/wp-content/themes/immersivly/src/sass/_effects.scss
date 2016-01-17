@@ -182,9 +182,11 @@
 
   // Opacity
   .effect-opacity {
+    &:hover {
       img {
         @include opacity(.8);
       }
+    }
   }
 }
 
